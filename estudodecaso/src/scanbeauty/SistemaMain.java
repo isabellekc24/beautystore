@@ -371,6 +371,12 @@ public class SistemaMain {
 								}
 							}
 							}
+							switch (op) {
+								case 6: {
+									// Fecha sistema
+									break;
+								}
+							}									
 						}
 						}
 					}
