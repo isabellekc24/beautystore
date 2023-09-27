@@ -85,10 +85,9 @@ public class SistemaMain {
 
 									if (opx.equals("s")) {
 										System.out.println("Produto adicionado ao carrinho");
-										System.out.println("Parabens");
 										produtos.add(bat1);
 										System.out.println("");
-										
+
 									} else {
 										break;
 									}
@@ -122,7 +121,7 @@ public class SistemaMain {
 									bat3.setNome("Batom Roxo");
 									bat3.setMarca("Mary Kay");
 									bat3.setPreco(24.98);
-									//produtos.add(bat3);
+									// produtos.add(bat3);
 
 									System.out.println("nome: " + bat3.getNome());
 									System.out.println("marca: " + bat3.getMarca());
@@ -144,7 +143,7 @@ public class SistemaMain {
 								}
 								break;
 							}
-							
+
 							case 2: {
 								while (op != 0) {
 									System.out.println("- RÍMEL -");
@@ -156,6 +155,56 @@ public class SistemaMain {
 									op = Integer.valueOf(leitura.nextLine());
 									break;
 								}
+								switch (op) {
+								case 1: {
+									Produto rim1 = new Produto();
+									rim1.setNome("Rímel 1");
+									rim1.setMarca("Avon");
+									rim1.setPreco(23.99);
+
+									System.out.println("nome: " + rim1.getNome());
+									System.out.println("marca: " + rim1.getMarca());
+									System.out.println("preco: " + rim1.getPreco());
+
+									System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
+									System.out.println("Insira sua opção: ");
+									String opx = leitura.nextLine();
+
+									if (opx.equals("s")) {
+										System.out.println("Produto adicionado ao carrinho");
+										produtos.add(rim1);
+										System.out.println("");
+
+									} else {
+										break;
+									}
+									break;
+								}
+								case 2: {
+									Produto rim2 = new Produto();
+									rim2.setNome("Rímel 2");
+									rim2.setMarca("Oboticario");
+									rim2.setPreco(20.90);
+
+									System.out.println("nome: " + rim2.getNome());
+									System.out.println("marca: " + rim2.getMarca());
+									System.out.println("preco: " + rim2.getPreco());
+
+									System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
+									System.out.println("Insira sua opção: ");
+									String opx = leitura.nextLine();
+
+									if (opx.equals("s")) {
+										System.out.println("Produto adicionado ao carrinho");
+										produtos.add(rim2);
+										System.out.println("");
+									} else {
+										break;
+									}
+									break;
+								}
+								}
+								break;
 							}
 							case 3: {
 								while (op != 0) {
