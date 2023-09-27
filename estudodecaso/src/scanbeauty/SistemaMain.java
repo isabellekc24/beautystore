@@ -74,7 +74,6 @@ public class SistemaMain {
 									bat1.setNome("Batom Rosa");
 									bat1.setMarca("Avon");
 									bat1.setPreco(24.98);
-									produtos.add(bat1);
 
 									System.out.println("nome: " + bat1.getNome());
 									System.out.println("marca: " + bat1.getMarca());
@@ -86,6 +85,7 @@ public class SistemaMain {
 
 									if (opx.equals("s")) {
 										System.out.println("Produto adicionado ao carrinho");
+										produtos.add(bat1);
 										System.out.println("");
 									} else {
 										break;
@@ -97,7 +97,6 @@ public class SistemaMain {
 									bat2.setNome("Batom Vermelho");
 									bat2.setMarca("Oboticario");
 									bat2.setPreco(24.98);
-									produtos.add(bat2);
 
 									System.out.println("nome: " + bat2.getNome());
 									System.out.println("marca: " + bat2.getMarca());
@@ -109,6 +108,7 @@ public class SistemaMain {
 
 									if (opx.equals("s")) {
 										System.out.println("Produto adicionado ao carrinho");
+										produtos.add(bat2);
 										System.out.println("");
 									} else {
 										break;
