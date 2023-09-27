@@ -9,7 +9,7 @@ public class SistemaMain {
 
 		Integer op = Integer.MAX_VALUE;
 		Scanner leitura = new Scanner(System.in);
-		ArrayList<Produto> produtos = new ArrayList<>();
+		ArrayList<Produto> carrinhoProdutos = new ArrayList<>();
 
 		while (op != 6) {
 
@@ -85,7 +85,7 @@ public class SistemaMain {
 
 									if (opx.equals("s")) {
 										System.out.println("Produto adicionado ao carrinho");
-										produtos.add(bat1);
+										carrinhoProdutos.add(bat1);
 										System.out.println("");
 
 									} else {
@@ -109,7 +109,7 @@ public class SistemaMain {
 
 									if (opx.equals("s")) {
 										System.out.println("Produto adicionado ao carrinho");
-										produtos.add(bat2);
+										carrinhoProdutos.add(bat2);
 										System.out.println("");
 									} else {
 										break;
@@ -133,7 +133,7 @@ public class SistemaMain {
 
 									if (opx.equals("s")) {
 										System.out.println("Produto adicionado ao carrinho!!");
-										produtos.add(bat3);
+										carrinhoProdutos.add(bat3);
 										System.out.println("");
 									} else {
 										break;
@@ -172,7 +172,7 @@ public class SistemaMain {
 
 									if (opx.equals("s")) {
 										System.out.println("Produto adicionado ao carrinho");
-										produtos.add(rim1);
+										carrinhoProdutos.add(rim1);
 										System.out.println("");
 
 									} else {
@@ -196,7 +196,7 @@ public class SistemaMain {
 
 									if (opx.equals("s")) {
 										System.out.println("Produto adicionado ao carrinho");
-										produtos.add(rim2);
+										carrinhoProdutos.add(rim2);
 										System.out.println("");
 									} else {
 										break;
