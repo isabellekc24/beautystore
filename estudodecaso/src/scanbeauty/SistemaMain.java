@@ -85,8 +85,10 @@ public class SistemaMain {
 
 									if (opx.equals("s")) {
 										System.out.println("Produto adicionado ao carrinho");
+										System.out.println("Parabens");
 										produtos.add(bat1);
 										System.out.println("");
+										
 									} else {
 										break;
 									}
