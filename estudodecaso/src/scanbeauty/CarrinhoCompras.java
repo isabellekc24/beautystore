@@ -6,7 +6,7 @@ public class CarrinhoCompras {
 	
 		//RemoverProduto
 		
-		//exibirProduto
+		//exibirProduto==carrinho
 		
 		//valorTotal, soma o preco de todos os produtos do carrinho
 
