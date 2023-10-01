@@ -20,7 +20,6 @@ public class SistemaMain {
 			System.out.println("4- EXCLUIR PRODUTO");
 			System.out.println("5- CADASTRAR NOVOS PRODUTOS");
 			System.out.println("6- SAIR DO PROGRAMA");
-			
 
 			op = Integer.valueOf(leitura.nextLine());
 
@@ -199,7 +198,7 @@ public class SistemaMain {
 											break;
 
 										} else if (opx.equals("n")) {
-											break; 
+											break;
 										} else {
 											System.out.println("Opçao incorreta. Porfavor, digite 's' ou 'n'");
 										}
@@ -261,20 +260,27 @@ public class SistemaMain {
 									System.out.println("marca: " + bas1.getMarca());
 									System.out.println("preco: " + bas1.getPreco());
 
-									System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
-									System.out.println("Insira sua opção: ");
-									String opx = leitura.nextLine();
+									do {
+										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
+										System.out.println("Insira sua opção: ");
+										String opx = leitura.nextLine();
 
-									if (opx.equals("s")) {
-										System.out.println("Produto adicionado ao carrinho");
-										carrinhoProdutos.add(bas1);
-										System.out.println("");
+										if (opx.equals("s")) {
+											System.out.println("Produto adicionado ao carrinho");
+											carrinhoProdutos.add(bas1);
+											System.out.println("");
 
-									} else {
-										break;
-									}
+											break; // para sair do loop qndo 's' for digitado
+
+										} else if (opx.equals("n")) {
+											break; // sai do loop quando 'n' for digitado
+										} else {
+											System.out.println("Opçao incorreta. Porfavor, digite 's' ou 'n'");
+										}
+									} while (op != 's' && op != 'n');
 									break;
 								}
+
 								case 2: {
 									Produto bas2 = new Produto();
 									bas2.setNome("Base tom 2");
@@ -285,19 +291,27 @@ public class SistemaMain {
 									System.out.println("marca: " + bas2.getMarca());
 									System.out.println("preco: " + bas2.getPreco());
 
-									System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
-									System.out.println("Insira sua opção: ");
-									String opx = leitura.nextLine();
+									do {
+										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
+										System.out.println("Insira sua opção: ");
+										String opx = leitura.nextLine();
 
-									if (opx.equals("s")) {
-										System.out.println("Produto adicionado ao carrinho");
-										carrinhoProdutos.add(bas2);
-										System.out.println("");
-									} else {
-										break;
-									}
+										if (opx.equals("s")) {
+											System.out.println("Produto adicionado ao carrinho");
+											carrinhoProdutos.add(bas2);
+											System.out.println("");
+
+											break; // para sair do loop qndo 's' for digitado
+
+										} else if (opx.equals("n")) {
+											break; // sai do loop quando 'n' for digitado
+										} else {
+											System.out.println("Opçao incorreta. Porfavor, digite 's' ou 'n'");
+										}
+									} while (op != 's' && op != 'n');
 									break;
 								}
+
 								case 3: {
 									Produto bas3 = new Produto();
 									bas3.setNome("Base tom 3");
@@ -308,17 +322,23 @@ public class SistemaMain {
 									System.out.println("marca: " + bas3.getMarca());
 									System.out.println("preco: " + bas3.getPreco());
 
-									System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
-									System.out.println("Insira sua opção: ");
-									String opx = leitura.nextLine();
+									do {
+										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
+										System.out.println("Insira sua opção: ");
+										String opx = leitura.nextLine();
 
-									if (opx.equals("s")) {
-										System.out.println("Produto adicionado ao carrinho");
-										carrinhoProdutos.add(bas3);
-										System.out.println("");
-									} else {
-										break;
-									}
+										if (opx.equals("s")) {
+											System.out.println("Produto adicionado ao carrinho");
+											carrinhoProdutos.add(bas3);
+											System.out.println("");
+
+											break;
+										} else if (opx.equals("n")) {
+											break;
+										} else {
+											System.out.println("Opçao incorreta. Porfavor, digite 's' ou 'n'");
+										}
+									} while (op != 's' && op != 'n');
 									break;
 								}
 								}
@@ -474,8 +494,8 @@ public class SistemaMain {
 							}
 							}
 
-							}
 						}
+					}
 					case 2: {
 						while (op != 6) {
 							System.out.println("- PELE -");
