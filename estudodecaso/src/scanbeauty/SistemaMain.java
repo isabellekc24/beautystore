@@ -490,6 +490,79 @@ public class SistemaMain {
 									op = Integer.valueOf(leitura.nextLine());
 									break;
 								}
+								switch (op) {
+								case 1: {
+									Produto sab1 = new Produto();
+									sab1.setNome("Sabonete Suave");
+									sab1.setMarca("Dove");
+									sab1.setPreco(4.90);
+
+									System.out.println("nome: " + sab1.getNome());
+									System.out.println("marca: " + sab1.getMarca());
+									System.out.println("preco: " + sab1.getPreco());
+
+									System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
+									System.out.println("Insira sua opção: ");
+									String opx = leitura.nextLine();
+
+									if (opx.equals("s")) {
+										System.out.println("Produto adicionado ao carrinho");
+										carrinhoProdutos.add(sab1);
+										System.out.println("");
+
+									} else {
+										break;
+									}
+									break;
+								}
+								case 2: {
+									Produto sab2 = new Produto();
+									sab2.setNome("Sabonete D'Leite ");
+									sab2.setMarca("Natura");
+									sab2.setPreco(6.98);
+
+									System.out.println("nome: " + sab2.getNome());
+									System.out.println("marca: " + sab2.getMarca());
+									System.out.println("preco: " + sab2.getPreco());
+
+									System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
+									System.out.println("Insira sua opção: ");
+									String opx = leitura.nextLine();
+
+									if (opx.equals("s")) {
+										System.out.println("Produto adicionado ao carrinho");
+										carrinhoProdutos.add(sab2);
+										System.out.println("");
+									} else {
+										break;
+									}
+									break;
+								}
+								case 3: {
+									Produto sab3 = new Produto();
+									sab3.setNome("Kit sabonete floral");
+									sab3.setMarca("Oboticario");
+									sab3.setPreco(19.75);
+
+									System.out.println("nome: " + sab3.getNome());
+									System.out.println("marca: " + sab3.getMarca());
+									System.out.println("preco: " + sab3.getPreco());
+
+									System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
+									System.out.println("Insira sua opção: ");
+									String opx = leitura.nextLine();
+
+									if (opx.equals("s")) {
+										System.out.println("Produto adicionado ao carrinho");
+										carrinhoProdutos.add(sab3);
+										System.out.println("");
+									} else {
+										break;
+									}
+									break;
+								}
+								}
+								break;
 							}
 							case 2: {
 								while (op != 0) {
@@ -503,8 +576,81 @@ public class SistemaMain {
 									op = Integer.valueOf(leitura.nextLine());
 									break;
 								}
+								switch (op) {
+								case 1: {
+									Produto hid1 = new Produto();
+									hid1.setNome("Hidratante 1");
+									hid1.setMarca("Oboticario");
+									hid1.setPreco(23.98);
 
+									System.out.println("nome: " + hid1.getNome());
+									System.out.println("marca: " + hid1.getMarca());
+									System.out.println("preco: " + hid1.getPreco());
+
+									System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
+									System.out.println("Insira sua opção: ");
+									String opx = leitura.nextLine();
+
+									if (opx.equals("s")) {
+										System.out.println("Produto adicionado ao carrinho");
+										carrinhoProdutos.add(hid1);
+										System.out.println("");
+
+									} else {
+										break;
+									}
+									break;
+								}
+								case 2: {
+									Produto hid2 = new Produto();
+									hid2.setNome("Hidratante 2");
+									hid2.setMarca("Natura");
+									hid2.setPreco(25.00);
+
+									System.out.println("nome: " + hid2.getNome());
+									System.out.println("marca: " + hid2.getMarca());
+									System.out.println("preco: " + hid2.getPreco());
+
+									System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
+									System.out.println("Insira sua opção: ");
+									String opx = leitura.nextLine();
+
+									if (opx.equals("s")) {
+										System.out.println("Produto adicionado ao carrinho");
+										carrinhoProdutos.add(hid2);
+										System.out.println("");
+									} else {
+										break;
+									}
+									break;
+								}
+								case 3: {
+									Produto hid3 = new Produto();
+									hid3.setNome("Hidratante 3");
+									hid3.setMarca("Nivea");
+									hid3.setPreco(36.99);
+
+									System.out.println("nome: " + hid3.getNome());
+									System.out.println("marca: " + hid3.getMarca());
+									System.out.println("preco: " + hid3.getPreco());
+
+									System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
+									System.out.println("Insira sua opção: ");
+									String opx = leitura.nextLine();
+
+									if (opx.equals("s")) {
+										System.out.println("Produto adicionado ao carrinho");
+										carrinhoProdutos.add(hid3);
+										System.out.println("");
+									} else {
+										break;
+									}
+									break;
+								}
+								}
+								break;
 							}
+
 							case 3: {
 								while (op != 0) {
 									System.out.println("- CERA DE DEPILAÇÃO -");
