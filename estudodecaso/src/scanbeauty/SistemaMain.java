@@ -20,6 +20,7 @@ public class SistemaMain {
 			System.out.println("4- EXCLUIR PRODUTO");
 			System.out.println("5- CADASTRAR NOVOS PRODUTOS");
 			System.out.println("6- SAIR DO PROGRAMA");
+			
 
 			op = Integer.valueOf(leitura.nextLine());
 
@@ -237,6 +238,79 @@ public class SistemaMain {
 									op = Integer.valueOf(leitura.nextLine());
 									break;
 								}
+								switch (op) {
+								case 1: {
+									Produto bas1 = new Produto();
+									bas1.setNome("Base tom 1");
+									bas1.setMarca("Avon");
+									bas1.setPreco(16.99);
+
+									System.out.println("nome: " + bas1.getNome());
+									System.out.println("marca: " + bas1.getMarca());
+									System.out.println("preco: " + bas1.getPreco());
+
+									System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
+									System.out.println("Insira sua opção: ");
+									String opx = leitura.nextLine();
+
+									if (opx.equals("s")) {
+										System.out.println("Produto adicionado ao carrinho");
+										carrinhoProdutos.add(bas1);
+										System.out.println("");
+
+									} else {
+										break;
+									}
+									break;
+								}
+								case 2: {
+									Produto bas2 = new Produto();
+									bas2.setNome("Base tom 2");
+									bas2.setMarca("Oboticario");
+									bas2.setPreco(16.99);
+
+									System.out.println("nome: " + bas2.getNome());
+									System.out.println("marca: " + bas2.getMarca());
+									System.out.println("preco: " + bas2.getPreco());
+
+									System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
+									System.out.println("Insira sua opção: ");
+									String opx = leitura.nextLine();
+
+									if (opx.equals("s")) {
+										System.out.println("Produto adicionado ao carrinho");
+										carrinhoProdutos.add(bas2);
+										System.out.println("");
+									} else {
+										break;
+									}
+									break;
+								}
+								case 3: {
+									Produto bas3 = new Produto();
+									bas3.setNome("Base tom 3");
+									bas3.setMarca("Ruby Rose");
+									bas3.setPreco(16.99);
+
+									System.out.println("nome: " + bas3.getNome());
+									System.out.println("marca: " + bas3.getMarca());
+									System.out.println("preco: " + bas3.getPreco());
+
+									System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
+									System.out.println("Insira sua opção: ");
+									String opx = leitura.nextLine();
+
+									if (opx.equals("s")) {
+										System.out.println("Produto adicionado ao carrinho");
+										carrinhoProdutos.add(bas3);
+										System.out.println("");
+									} else {
+										break;
+									}
+									break;
+								}
+								}
+								break;
 							}
 							case 4: {
 								while (op != 0) {
@@ -250,6 +324,79 @@ public class SistemaMain {
 									op = Integer.valueOf(leitura.nextLine());
 									break;
 								}
+								switch (op) {
+								case 1: {
+									Produto corr1 = new Produto();
+									corr1.setNome("Corretivo tom 1");
+									corr1.setMarca("Avon");
+									corr1.setPreco(15.00);
+
+									System.out.println("nome: " + corr1.getNome());
+									System.out.println("marca: " + corr1.getMarca());
+									System.out.println("preco: " + corr1.getPreco());
+
+									System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
+									System.out.println("Insira sua opção: ");
+									String opx = leitura.nextLine();
+
+									if (opx.equals("s")) {
+										System.out.println("Produto adicionado ao carrinho");
+										carrinhoProdutos.add(corr1);
+										System.out.println("");
+
+									} else {
+										break;
+									}
+									break;
+								}
+								case 2: {
+									Produto corr2 = new Produto();
+									corr2.setNome("Corretivo tom 2");
+									corr2.setMarca("Oboticario");
+									corr2.setPreco(15.00);
+
+									System.out.println("nome: " + corr2.getNome());
+									System.out.println("marca: " + corr2.getMarca());
+									System.out.println("preco: " + corr2.getPreco());
+
+									System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
+									System.out.println("Insira sua opção: ");
+									String opx = leitura.nextLine();
+
+									if (opx.equals("s")) {
+										System.out.println("Produto adicionado ao carrinho");
+										carrinhoProdutos.add(corr2);
+										System.out.println("");
+									} else {
+										break;
+									}
+									break;
+								}
+								case 3: {
+									Produto corr3 = new Produto();
+									corr3.setNome("Corretivo tom 3");
+									corr3.setMarca("Ruby Rose");
+									corr3.setPreco(15.00);
+
+									System.out.println("nome: " + corr3.getNome());
+									System.out.println("marca: " + corr3.getMarca());
+									System.out.println("preco: " + corr3.getPreco());
+
+									System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
+									System.out.println("Insira sua opção: ");
+									String opx = leitura.nextLine();
+
+									if (opx.equals("s")) {
+										System.out.println("Produto adicionado ao carrinho");
+										carrinhoProdutos.add(corr3);
+										System.out.println("");
+									} else {
+										break;
+									}
+									break;
+								}
+								}
+								break;
 							}
 							case 5: {
 								while (op != 0) {
