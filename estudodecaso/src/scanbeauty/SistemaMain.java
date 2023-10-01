@@ -409,12 +409,61 @@ public class SistemaMain {
 									op = Integer.valueOf(leitura.nextLine());
 									break;
 								}
+								switch (op) {
+								case 1: {
+									Produto del1 = new Produto();
+									del1.setNome("Delineador 1");
+									del1.setMarca("Avon");
+									del1.setPreco(19.90);
+
+									System.out.println("nome: " + del1.getNome());
+									System.out.println("marca: " + del1.getMarca());
+									System.out.println("preco: " + del1.getPreco());
+
+									System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
+									System.out.println("Insira sua opção: ");
+									String opx = leitura.nextLine();
+
+									if (opx.equals("s")) {
+										System.out.println("Produto adicionado ao carrinho");
+										carrinhoProdutos.add(del1);
+										System.out.println("");
+
+									} else {
+										break;
+									}
+									break;
+								}
+								case 2: {
+									Produto del2 = new Produto();
+									del2.setNome("Delineador 2");
+									del2.setMarca("Oboticario");
+									del2.setPreco(25.00);
+
+									System.out.println("nome: " + del2.getNome());
+									System.out.println("marca: " + del2.getMarca());
+									System.out.println("preco: " + del2.getPreco());
+
+									System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
+									System.out.println("Insira sua opção: ");
+									String opx = leitura.nextLine();
+
+									if (opx.equals("s")) {
+										System.out.println("Produto adicionado ao carrinho");
+										carrinhoProdutos.add(del2);
+										System.out.println("");
+									} else {
+										break;
+									}
+									break;
+								}
+								}
+								break;
+							}
 							}
 
 							}
 						}
-
-					}
 					case 2: {
 						while (op != 6) {
 							System.out.println("- PELE -");
