@@ -1526,7 +1526,7 @@ public class SistemaMain {
 								case 1: {
 									Produto luv1 = new Produto();
 									luv1.setNome("Luva Rosa");
-									luv1.setMarca("xxxx");
+									luv1.setMarca("UniGloves");
 									luv1.setPreco(18.90);
 
 									System.out.println("nome: " + luv1.getNome());
@@ -1556,7 +1556,7 @@ public class SistemaMain {
 								case 2: {
 									Produto luv2 = new Produto();
 									luv2.setNome("Luvas Brancas");
-									luv2.setMarca("xxxx");
+									luv2.setMarca("Medix");
 									luv2.setPreco(21.80);
 
 									System.out.println("nome: " + luv2.getNome());
@@ -1586,7 +1586,7 @@ public class SistemaMain {
 								case 3: {
 									Produto luv3 = new Produto();
 									luv3.setNome("Luva roxa");
-									luv3.setMarca("xxxx");
+									luv3.setMarca("Supermax");
 									luv3.setPreco(20.90);
 
 									System.out.println("nome: " + luv3.getNome());
@@ -1631,7 +1631,7 @@ public class SistemaMain {
 								case 1: {
 									Produto sec1 = new Produto();
 									sec1.setNome("Secador de Cabelo Preto");
-									sec1.setMarca("xxxx");
+									sec1.setMarca("Taif");
 									sec1.setPreco(238.90);
 
 									System.out.println("nome: " + sec1.getNome());
@@ -1661,7 +1661,7 @@ public class SistemaMain {
 								case 2: {
 									Produto sec2 = new Produto();
 									sec2.setNome("Secador de cabelo Vermelho");
-									sec2.setMarca("xxxx");
+									sec2.setMarca("Philco");
 									sec2.setPreco(119.90);
 
 									System.out.println("nome: " + sec2.getNome());
@@ -1811,9 +1811,9 @@ public class SistemaMain {
 								switch (op) {
 								case 1: {
 									Produto des1 = new Produto();
-									des1.setNome("Desodorante Dove");
-									des1.setMarca("Dove");
-									des1.setPreco(21.90);
+									des1.setNome("Chapinha Preta");
+									des1.setMarca("Lizze");
+									des1.setPreco(449.00);
 
 									System.out.println("nome: " + des1.getNome());
 									System.out.println("marca: " + des1.getMarca());
@@ -1841,14 +1841,14 @@ public class SistemaMain {
 
 								}
 								case 2: {
-									Produto des2 = new Produto();
-									des2.setNome("Desodorante Rexona");
-									des2.setMarca("Rexona");
-									des2.setPreco(22.99);
+									Produto chap1 = new Produto();
+									chap1.setNome("Chapinha Rosa");
+									chap1.setMarca("Salles");
+									chap1.setPreco(398.00);
 
-									System.out.println("nome: " + des2.getNome());
-									System.out.println("marca: " + des2.getMarca());
-									System.out.println("preco: " + des2.getPreco());
+									System.out.println("nome: " + chap1.getNome());
+									System.out.println("marca: " + chap1.getMarca());
+									System.out.println("preco: " + chap1.getPreco());
 
 									do {
 										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
@@ -1857,7 +1857,7 @@ public class SistemaMain {
 
 										if (opx.equals("s")) {
 											System.out.println("Produto adicionado ao carrinho");
-											carrinhoProdutos.add(des2);
+											carrinhoProdutos.add(chap1);
 											System.out.println("");
 
 											break;
@@ -1870,14 +1870,14 @@ public class SistemaMain {
 									break;
 								}
 								case 3: {
-									Produto des3 = new Produto();
-									des3.setNome("Desodorante Nivea");
-									des3.setMarca("Nivea");
-									des3.setPreco(32.90);
+									Produto chap2 = new Produto();
+									chap2.setNome("Chapinha Azul");
+									chap2.setMarca("Nano");
+									chap2.setPreco(170.70);
 
-									System.out.println("nome: " + des3.getNome());
-									System.out.println("marca: " + des3.getMarca());
-									System.out.println("preco: " + des3.getPreco());
+									System.out.println("nome: " + chap2.getNome());
+									System.out.println("marca: " + chap2.getMarca());
+									System.out.println("preco: " + chap2.getPreco());
 
 									do {
 										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
@@ -1886,7 +1886,7 @@ public class SistemaMain {
 
 										if (opx.equals("s")) {
 											System.out.println("Produto adicionado ao carrinho");
-											carrinhoProdutos.add(des3);
+											carrinhoProdutos.add(chap2);
 											System.out.println("");
 
 											break;
@@ -1916,7 +1916,7 @@ public class SistemaMain {
 								case 1: {
 									Produto touc1 = new Produto();
 									touc1.setNome("Touca de banho");
-									touc1.setMarca("xxxx");
+									touc1.setMarca("Ricca");
 									touc1.setPreco(15.50);
 
 									System.out.println("nome: " + touc1.getNome());
@@ -1946,7 +1946,7 @@ public class SistemaMain {
 								case 2: {
 									Produto touc2 = new Produto();
 									touc2.setNome("Touca de cetim");
-									touc2.setMarca("xxxx");
+									touc2.setMarca("Bemart");
 									touc2.setPreco(25.00);
 
 									System.out.println("nome: " + touc2.getNome());
