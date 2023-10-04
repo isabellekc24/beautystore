@@ -2008,7 +2008,24 @@ public class SistemaMain {
 					}
 				} while (op != 0);
 				break;
+<<<<<<< Updated upstream
 			} // aspa case2
+=======
+			}
+			case 3:{
+				
+				break;
+			}
+			case 4:{
+				System.out.println("EXLUIR PRODUTOS");
+				System.out.println("");
+				System.out.println("0 - Voltar para aba anterior");
+				//vai aparecer a lista das coisas que tem no carrinho
+				System.out.println("Insira o numero de qual deseja excluir: ");
+				
+				break;
+			}
+>>>>>>> Stashed changes
 			}
 		}
 		leitura.close();
