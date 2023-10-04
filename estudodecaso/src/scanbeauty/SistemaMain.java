@@ -9,7 +9,7 @@ public class SistemaMain {
 
 		Integer op = Integer.MAX_VALUE;
 		Scanner leitura = new Scanner(System.in);
-		
+
 		ArrayList<Produto> carrinhoProdutos = new ArrayList<>();
 
 		while (op != 6) {
@@ -1987,12 +1987,27 @@ public class SistemaMain {
 					}
 				}
 			}
-			case 2:{
+			case 2: {
+
+				System.out.println("- EXIBIR PRODUTOS -  ");
+				System.out.println("");
 				for (Produto produto : carrinhoProdutos) {
-					System.out.println(produto.getNome());
+					System.out.println("Nome: " + produto.getNome() + "   Marca: " + produto.getMarca() + "   Preco: "
+							+ produto.getPreco());
 				}
+
+				System.out.println("Pressione 0 para voltar pra aba anterior: ");
+				String opx = leitura.nextLine();
+
+				do {
+					if (opx.equals(0)) {
+						break;
+					} else {
+						System.out.println("Opcao incorreta. Por favor, digite 0 para voltar: ");
+					}
+				} while (op != 0);
 				break;
-			}
+			} // aspa case2
 			}
 		}
 		leitura.close();
