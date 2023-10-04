@@ -2012,16 +2012,24 @@ public class SistemaMain {
 			} // aspa case2
 =======
 			}
-			case 3:{
+			case 3: {
+				System.out.println("Digite o codigo de barras do produto a ser alterado:");
+				long codBarras = Long.valueOf(leitura.nextLine());
 				
-				break;
-			}
-			case 4:{
-				System.out.println("EXLUIR PRODUTOS");
-				System.out.println("");
-				System.out.println("0 - Voltar para aba anterior");
-				//vai aparecer a lista das coisas que tem no carrinho
-				System.out.println("Insira o numero de qual deseja excluir: ");
+				for (Produto produto : carrinhoProdutos) {
+					if(produto.getCodBarra() == codBarras) {
+						System.out.println("Você ecolheu o produto: "+ produto.getNome());
+						
+						System.out.println("Digite o novo preco:");
+						double novoPreco = Double.valueOf(leitura.nextLine());
+						produto.setPreco(novoPreco);
+						
+						
+						
+					} else {
+						System.out.println();
+					}
+				}
 				
 				break;
 			}
@@ -2034,25 +2042,18 @@ public class SistemaMain {
 }
 
 /*
- * // Leitura de dados (input) System.out.println("Nome:"); String nome =
- * leitura.nextLine(); System.out.println("Cpf:"); String cpf =
- * leitura.nextLine();
- * 
- * Pessoa p = new Pessoa(); p.setNome(nome); p.setCpf(Long.valueOf(cpf));
- * 
- * pessoas.add(p);
- * 
- * } case 2: { System.out.println("Digite o cpf da pessoa que deseja alterar:");
- * // finalizar codigo } case 3: {
- * System.out.println("Digite o cpf da pessoa que deseja excluir:"); //
- * finalizar codigo } case 4: { // Saida de dados (output)
- * System.out.println("Listagem de pessoas cadastradas: "); for (Pessoa pessoa :
- * pessoas) { System.out.println("Cpf: " + pessoa.getCpf());
- * System.out.println("Nome: " + pessoa.getNome()); } }
- * 
- * }
- * 
- * }
- * 
- * leitura.close(); } }
+  // Leitura de dados (input) System.out.println("Nome:"); String nome = leitura.nextLine(); System.out.println("Cpf:"); String cpf = leitura.nextLine();
+  Pessoa p = new Pessoa(); p.setNome(nome); p.setCpf(Long.valueOf(cpf));
+  pessoas.add(p);
+  } case 2: { System.out.println("Digite o cpf da pessoa que deseja alterar:");
+  // finalizar codigo } 
+  case 3: {
+  System.out.println("Digite o cpf da pessoa que deseja excluir:"); //finalizar codigo 
+  }
+  case 4: { // Saida de dados (output)
+  System.out.println("Listagem de pessoas cadastradas: "); 
+  for (Pessoa pessoa :pessoas) { System.out.println("Cpf: " + pessoa.getCpf());
+  System.out.println("Nome: " + pessoa.getNome()); } }  
+  } 
+  } 
  */
