@@ -9,7 +9,6 @@ public class SistemaMain {
 
 		Integer op = Integer.MAX_VALUE;
 		Scanner leitura = new Scanner(System.in);
-
 		ArrayList<Produto> carrinhoProdutos = new ArrayList<>();
 
 		while (op != 6) {
@@ -25,6 +24,7 @@ public class SistemaMain {
 			op = Integer.valueOf(leitura.nextLine());
 
 			switch (op) {
+			
 			case 1: {
 
 				while (op != 5) {
@@ -75,6 +75,7 @@ public class SistemaMain {
 									System.out.println("nome: " + bat1.getNome());
 									System.out.println("marca: " + bat1.getMarca());
 									System.out.println("preco: " + bat1.getPreco());
+
 									do {
 										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
 										System.out.println("Insira sua opção: ");
