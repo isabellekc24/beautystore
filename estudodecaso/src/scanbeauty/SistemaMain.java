@@ -24,7 +24,7 @@ public class SistemaMain {
 			op = Integer.valueOf(leitura.nextLine());
 
 			switch (op) {
-			
+
 			case 1: {
 
 				while (op != 5) {
@@ -1984,62 +1984,109 @@ public class SistemaMain {
 				break;
 			}
 			case 2: {
-
+				System.out.println("");
 				System.out.println("- EXIBIR PRODUTOS -  ");
 				System.out.println("");
 				for (Produto produto : carrinhoProdutos) {
 					System.out.println("Nome: " + produto.getNome() + "   Marca: " + produto.getMarca() + "   Preco: "
 							+ produto.getPreco());
 				}
-
 				do {
-					System.out.println("Pressione 0 para voltar pra aba anterior: ");
+					System.out.println("Pressione x para voltar pra aba anterior: ");
 					String opx = leitura.nextLine();
 
-					if (opx.equals("0")) {
+					if (opx.equals("x")) {
 						break;
 					} else {
-						System.out.println("Opcao incorreta. Por favor, digite 0 para voltar: ");
+						System.out.println("Opcao incorreta. Por favor, digite x para voltar: ");
 					}
-				} while (op != '0');
+				} while (op != 'x');
 				break;
 			} // aspa case2
-			
+
 			case 3: {
 				System.out.println("ALTERAR PRODUTOS");
 				System.out.println("Digite o codigo de barras do produto a ser alterado:");
 				long codBarras = Long.valueOf(leitura.nextLine());
-				
+
 				for (Produto produto : carrinhoProdutos) {
-					if(produto.getCodBarra() == codBarras) {
-						System.out.println("Você ecolheu o produto: "+ produto.getNome());
-						
+					if (produto.getCodBarra() == codBarras) {
+						System.out.println("Você ecolheu o produto: " + produto.getNome());
+
 						System.out.println("Digite o novo preco:");
 						double novoPreco = Double.valueOf(leitura.nextLine());
 						produto.setPreco(novoPreco);
-					
+
 					} else {
 						System.out.println();
 					}
 				}
-				
+
 				break;
 			}
-			case 4:{
+			case 4: {
+				System.out.println("");
 				System.out.println("EXCLUIR PRODUTOS");
+				System.out.println("");
 				
+				//exibe a lista de produtos enumerada
+				for (int i = 0; i<carrinhoProdutos.size(); i++) { //.size, meio que diz o tamanho da lista que esta no carrinho
+					Produto produto = carrinhoProdutos.get(i);
+					System.out.println(i +"- Nome: " + produto.getNome() + "   Marca: " + produto.getMarca() + "   Preco: "
+							+ produto.getPreco());
+				}
+				
+				//essa parte verifica se o carrinhoProdutos estiver vazio exibe uma msg
+				if (carrinhoProdutos.isEmpty()) {  //.isEmpty, ve se o carrinho esta vazio ou == a 0
+					System.out.println("O carrinho esta vazio");
+					System.out.println("");
+				}else {  //se nao, pede ao usuario qual ele quer excluir
+					System.out.println("Insira o numero de qual voce quer excluir: ");
+					int exc = Integer.valueOf(leitura.nextLine());
+					
+					
+					//esse if ve se o numero digitado pelo usuario correponde a algum produto da lista
+					//SE estiver na lista, pede para que o usuario confirme ou nao a exclusao.
+					//SE NAO estiver na lista diz que o produto e invalido, porque ele nao esta na lista 
+					if(exc >= 0 && exc < carrinhoProdutos.size()) {
+						do {
+							System.out.println("Voce tem certeza que quer excluir esse produto? (s/n)");
+							System.out.println("Insira sua opção: ");
+							String opx = leitura.nextLine();
+
+							if (opx.equals("s")) {
+								//produtoExc recebe o produto excluido para remover do carrinhoProdutos
+								Produto produtoExc = carrinhoProdutos.remove(exc);
+								System.out.println("Produto removido: "+produtoExc.getNome());
+								System.out.println("");
+
+								break;
+							} else if (opx.equals("n")) {
+								break;
+							} else {
+								System.out.println("Opçao incorreta. Porfavor, digite 's' ou 'n'");
+							}
+						} while (op != 's' && op != 'n');
+					}
+					else {
+						System.out.println("Produto invalido. Nao removido");
+					}
+				}
 				break;
 			}
-			case 5:{
+			case 5: {
 				System.out.println("CADASTRAR NOVOS PRODUTOS");
-				
+
 				break;
 			}
-			case 6:{
+			case 6: {
 				System.out.println("PROGRAMA FINALIZADO!");
-				
+
 				break;
 			}
+			default:
+				System.out.println("opcao invalida!");
+				break;
 			}
 		}
 		leitura.close();
@@ -2048,18 +2095,15 @@ public class SistemaMain {
 }
 
 /*
-  // Leitura de dados (input) System.out.println("Nome:"); String nome = leitura.nextLine(); System.out.println("Cpf:"); String cpf = leitura.nextLine();
-  Pessoa p = new Pessoa(); p.setNome(nome); p.setCpf(Long.valueOf(cpf));
-  pessoas.add(p);
-  } case 2: { System.out.println("Digite o cpf da pessoa que deseja alterar:");
-  // finalizar codigo } 
-  case 3: {
-  System.out.println("Digite o cpf da pessoa que deseja excluir:"); //finalizar codigo 
-  }
-  case 4: { // Saida de dados (output)
-  System.out.println("Listagem de pessoas cadastradas: "); 
-  for (Pessoa pessoa :pessoas) { System.out.println("Cpf: " + pessoa.getCpf());
-  System.out.println("Nome: " + pessoa.getNome()); } }  
-  } 
-  } 
+ * // Leitura de dados (input) System.out.println("Nome:"); String nome =
+ * leitura.nextLine(); System.out.println("Cpf:"); String cpf =
+ * leitura.nextLine(); Pessoa p = new Pessoa(); p.setNome(nome);
+ * p.setCpf(Long.valueOf(cpf)); pessoas.add(p); } case 2: {
+ * System.out.println("Digite o cpf da pessoa que deseja alterar:"); //
+ * finalizar codigo } case 3: {
+ * System.out.println("Digite o cpf da pessoa que deseja excluir:"); //finalizar
+ * codigo } case 4: { // Saida de dados (output)
+ * System.out.println("Listagem de pessoas cadastradas: "); for (Pessoa pessoa
+ * :pessoas) { System.out.println("Cpf: " + pessoa.getCpf());
+ * System.out.println("Nome: " + pessoa.getNome()); } } } }
  */
