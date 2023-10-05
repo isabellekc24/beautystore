@@ -24,6 +24,7 @@ public class SistemaMain {
 			op = Integer.valueOf(leitura.nextLine());
 
 			switch (op) {
+			
 			case 1: {
 
 				while (op != 5) {
@@ -1976,36 +1977,83 @@ public class SistemaMain {
 								break;
 							}
 							}
+							switch (op) {
+							case 6: {
+								// Fecha sistema
+								break;
+							}
+							}
 						}
 					}
 					}
-				}//coloquei um brak debaixo do while op!=5
+				}
+			}
+			case 2: {
+
+				System.out.println("- EXIBIR PRODUTOS -  ");
+				System.out.println("");
+				for (Produto produto : carrinhoProdutos) {
+					System.out.println("Nome: " + produto.getNome() + "   Marca: " + produto.getMarca() + "   Preco: "
+							+ produto.getPreco());
+				}
+
+				System.out.println("Pressione 0 para voltar pra aba anterior: ");
+				String opx = leitura.nextLine();
+
+				do {
+					if (opx.equals(0)) {
+						break;
+					} else {
+						System.out.println("Opcao incorreta. Por favor, digite 0 para voltar: ");
+					}
+				} while (op != 0);
+				break;
+<<<<<<< Updated upstream
+			} // aspa case2
+=======
+			}
+			case 3: {
+				System.out.println("Digite o codigo de barras do produto a ser alterado:");
+				long codBarras = Long.valueOf(leitura.nextLine());
+				
+				for (Produto produto : carrinhoProdutos) {
+					if(produto.getCodBarra() == codBarras) {
+						System.out.println("Você ecolheu o produto: "+ produto.getNome());
+						
+						System.out.println("Digite o novo preco:");
+						double novoPreco = Double.valueOf(leitura.nextLine());
+						produto.setPreco(novoPreco);
+						
+						
+						
+					} else {
+						System.out.println();
+					}
+				}
+				
 				break;
 			}
-			case 2:{
-				System.out.println("EXIBIR PRODUTOS");
-				break;
-			}
-			case 3:{
-				System.out.println("ALTERAR PRODUTOS");
-				break;
-			}
-			case 4:{
-				System.out.println("EXCLUIR PRODUTOS");
-				break;
-			}
-			case 5:{
-				System.out.println("CADASTRAR NOVOS PRODUTOS");
-				break;
-			}
-			case 6: {
-				System.out.println("PROGRAMA FINALIZADO!");
-				//fecha o sistema
-				break;
-			}
+>>>>>>> Stashed changes
 			}
 		}
 		leitura.close();
 
 	}
 }
+
+/*
+  // Leitura de dados (input) System.out.println("Nome:"); String nome = leitura.nextLine(); System.out.println("Cpf:"); String cpf = leitura.nextLine();
+  Pessoa p = new Pessoa(); p.setNome(nome); p.setCpf(Long.valueOf(cpf));
+  pessoas.add(p);
+  } case 2: { System.out.println("Digite o cpf da pessoa que deseja alterar:");
+  // finalizar codigo } 
+  case 3: {
+  System.out.println("Digite o cpf da pessoa que deseja excluir:"); //finalizar codigo 
+  }
+  case 4: { // Saida de dados (output)
+  System.out.println("Listagem de pessoas cadastradas: "); 
+  for (Pessoa pessoa :pessoas) { System.out.println("Cpf: " + pessoa.getCpf());
+  System.out.println("Nome: " + pessoa.getNome()); } }  
+  } 
+  } 
+ */
