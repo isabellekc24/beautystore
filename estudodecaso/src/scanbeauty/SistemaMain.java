@@ -1977,16 +1977,11 @@ public class SistemaMain {
 								break;
 							}
 							}
-							switch (op) {
-							case 6: {
-								// Fecha sistema
-								break;
-							}
-							}
 						}
 					}
 					}
 				}
+				break;
 			}
 			case 2: {
 
@@ -1997,22 +1992,21 @@ public class SistemaMain {
 							+ produto.getPreco());
 				}
 
-				System.out.println("Pressione 0 para voltar pra aba anterior: ");
-				String opx = leitura.nextLine();
-
 				do {
-					if (opx.equals(0)) {
+					System.out.println("Pressione 0 para voltar pra aba anterior: ");
+					String opx = leitura.nextLine();
+
+					if (opx.equals("0")) {
 						break;
 					} else {
 						System.out.println("Opcao incorreta. Por favor, digite 0 para voltar: ");
 					}
-				} while (op != 0);
+				} while (op != '0');
 				break;
-<<<<<<< Updated upstream
 			} // aspa case2
-=======
-			}
+			
 			case 3: {
+				System.out.println("ALTERAR PRODUTOS");
 				System.out.println("Digite o codigo de barras do produto a ser alterado:");
 				long codBarras = Long.valueOf(leitura.nextLine());
 				
@@ -2023,9 +2017,7 @@ public class SistemaMain {
 						System.out.println("Digite o novo preco:");
 						double novoPreco = Double.valueOf(leitura.nextLine());
 						produto.setPreco(novoPreco);
-						
-						
-						
+					
 					} else {
 						System.out.println();
 					}
@@ -2033,7 +2025,21 @@ public class SistemaMain {
 				
 				break;
 			}
->>>>>>> Stashed changes
+			case 4:{
+				System.out.println("EXCLUIR PRODUTOS");
+				
+				break;
+			}
+			case 5:{
+				System.out.println("CADASTRAR NOVOS PRODUTOS");
+				
+				break;
+			}
+			case 6:{
+				System.out.println("PROGRAMA FINALIZADO!");
+				
+				break;
+			}
 			}
 		}
 		leitura.close();
