@@ -71,10 +71,12 @@ public class SistemaMain {
 									bat1.setNome("Batom Rosa");
 									bat1.setMarca("Avon");
 									bat1.setPreco(24.98);
+									bat1.setCodBarra(123456789);
 
 									System.out.println("nome: " + bat1.getNome());
 									System.out.println("marca: " + bat1.getMarca());
 									System.out.println("preco: " + bat1.getPreco());
+									System.out.println("Código de Barra: " + bat1.getCodBarra());
 
 									do {
 										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
@@ -2028,36 +2030,38 @@ public class SistemaMain {
 				System.out.println("");
 				System.out.println("EXCLUIR PRODUTOS");
 				System.out.println("");
-				
-				//exibe a lista de produtos enumerada
-				for (int i = 0; i<carrinhoProdutos.size(); i++) { //.size, meio que diz o tamanho da lista que esta no carrinho
+
+				// exibe a lista de produtos enumerada
+				for (int i = 0; i < carrinhoProdutos.size(); i++) { // .size, meio que diz o tamanho da lista que esta
+																	// no carrinho
 					Produto produto = carrinhoProdutos.get(i);
-					System.out.println(i +"- Nome: " + produto.getNome() + "   Marca: " + produto.getMarca() + "   Preco: "
-							+ produto.getPreco());
+					System.out.println(i + "- Nome: " + produto.getNome() + "   Marca: " + produto.getMarca()
+							+ "   Preco: " + produto.getPreco());
 				}
-				
-				//essa parte verifica se o carrinhoProdutos estiver vazio exibe uma msg
-				if (carrinhoProdutos.isEmpty()) {  //.isEmpty, ve se o carrinho esta vazio ou == a 0
+
+				// essa parte verifica se o carrinhoProdutos estiver vazio exibe uma msg
+				if (carrinhoProdutos.isEmpty()) { // .isEmpty, ve se o carrinho esta vazio ou == a 0
 					System.out.println("O carrinho esta vazio");
 					System.out.println("");
-				}else {  //se nao, pede ao usuario qual ele quer excluir
+				} else { // se nao, pede ao usuario qual ele quer excluir
 					System.out.println("Insira o numero de qual voce quer excluir: ");
 					int exc = Integer.valueOf(leitura.nextLine());
-					
-					
-					//esse if ve se o numero digitado pelo usuario correponde a algum produto da lista
-					//SE estiver na lista, pede para que o usuario confirme ou nao a exclusao.
-					//SE NAO estiver na lista diz que o produto e invalido, porque ele nao esta na lista 
-					if(exc >= 0 && exc < carrinhoProdutos.size()) {
+
+					// esse if ve se o numero digitado pelo usuario correponde a algum produto da
+					// lista
+					// SE estiver na lista, pede para que o usuario confirme ou nao a exclusao.
+					// SE NAO estiver na lista diz que o produto e invalido, porque ele nao esta na
+					// lista
+					if (exc >= 0 && exc < carrinhoProdutos.size()) {
 						do {
 							System.out.println("Voce tem certeza que quer excluir esse produto? (s/n)");
 							System.out.println("Insira sua opção: ");
 							String opx = leitura.nextLine();
 
 							if (opx.equals("s")) {
-								//produtoExc recebe o produto excluido para remover do carrinhoProdutos
+								// produtoExc recebe o produto excluido para remover do carrinhoProdutos
 								Produto produtoExc = carrinhoProdutos.remove(exc);
-								System.out.println("Produto removido: "+produtoExc.getNome());
+								System.out.println("Produto removido: " + produtoExc.getNome());
 								System.out.println("");
 
 								break;
@@ -2067,16 +2071,16 @@ public class SistemaMain {
 								System.out.println("Opçao incorreta. Porfavor, digite 's' ou 'n'");
 							}
 						} while (op != 's' && op != 'n');
-					}
-					else {
+					} else {
 						System.out.println("Produto invalido. Nao removido");
 					}
 				}
 				break;
 			}
-			case 5: {
+			case 5: { //tirar do codigo
 				System.out.println("CADASTRAR NOVOS PRODUTOS");
-
+				System.out.println("");
+				
 				break;
 			}
 			case 6: {

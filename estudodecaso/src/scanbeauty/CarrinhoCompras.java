@@ -2,12 +2,8 @@ package scanbeauty;
 
 public class CarrinhoCompras {
 	
-		//adicionarProdutos
+	//alterar produtos
 	
-		//RemoverProduto
-		
-		//exibirProduto==carrinho
-		
-		//valorTotal, soma o preco de todos os produtos do carrinho
+	//valorTotal, soma o preco de todos os produtos do carrinho
 
 }
