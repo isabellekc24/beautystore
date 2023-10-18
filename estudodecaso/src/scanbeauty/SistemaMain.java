@@ -103,10 +103,12 @@ public class SistemaMain {
 									bat2.setNome("Batom Vermelho");
 									bat2.setMarca("Oboticario");
 									bat2.setPreco(24.98);
+									bat2.setCodBarra(123546987);
 
 									System.out.println("nome: " + bat2.getNome());
 									System.out.println("marca: " + bat2.getMarca());
 									System.out.println("preco: " + bat2.getPreco());
+									System.out.println("Código de Barra: " + bat2.getCodBarra());
 
 									do {
 										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
@@ -133,11 +135,12 @@ public class SistemaMain {
 									bat3.setNome("Batom Roxo");
 									bat3.setMarca("Mary Kay");
 									bat3.setPreco(24.98);
-									// produtos.add(bat3);
+									bat3.setCodBarra(546978523);
 
 									System.out.println("nome: " + bat3.getNome());
 									System.out.println("marca: " + bat3.getMarca());
 									System.out.println("preco: " + bat3.getPreco());
+									System.out.println("Código de Barra: " + bat3.getCodBarra());
 
 									do {
 										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
@@ -179,10 +182,12 @@ public class SistemaMain {
 									rim1.setNome("Rímel 1");
 									rim1.setMarca("Avon");
 									rim1.setPreco(23.99);
+									rim1.setCodBarra(547869321);
 
 									System.out.println("nome: " + rim1.getNome());
 									System.out.println("marca: " + rim1.getMarca());
 									System.out.println("preco: " + rim1.getPreco());
+									System.out.println("Código de Barra: " + rim1.getCodBarra());
 
 									do {
 										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
@@ -209,10 +214,12 @@ public class SistemaMain {
 									rim2.setNome("Rímel 2");
 									rim2.setMarca("Oboticario");
 									rim2.setPreco(20.90);
+									rim2.setCodBarra(452136987);
 
 									System.out.println("nome: " + rim2.getNome());
 									System.out.println("marca: " + rim2.getMarca());
 									System.out.println("preco: " + rim2.getPreco());
+									System.out.println("Código de Barra: " + rim2.getCodBarra());
 
 									do {
 										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
@@ -254,10 +261,12 @@ public class SistemaMain {
 									bas1.setNome("Base tom 1");
 									bas1.setMarca("Avon");
 									bas1.setPreco(16.99);
+									bas1.setCodBarra(654123987);
 
 									System.out.println("nome: " + bas1.getNome());
 									System.out.println("marca: " + bas1.getMarca());
 									System.out.println("preco: " + bas1.getPreco());
+									System.out.println("Código de Barra: " + bas1.getCodBarra());
 
 									do {
 										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
@@ -285,10 +294,12 @@ public class SistemaMain {
 									bas2.setNome("Base tom 2");
 									bas2.setMarca("Oboticario");
 									bas2.setPreco(16.99);
+									bas2.setCodBarra(321654870);
 
 									System.out.println("nome: " + bas2.getNome());
 									System.out.println("marca: " + bas2.getMarca());
 									System.out.println("preco: " + bas2.getPreco());
+									System.out.println("Código de Barra: " + bas2.getCodBarra());
 
 									do {
 										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
@@ -316,10 +327,12 @@ public class SistemaMain {
 									bas3.setNome("Base tom 3");
 									bas3.setMarca("Ruby Rose");
 									bas3.setPreco(16.99);
+									bas3.setCodBarra(302546987);
 
 									System.out.println("nome: " + bas3.getNome());
 									System.out.println("marca: " + bas3.getMarca());
 									System.out.println("preco: " + bas3.getPreco());
+									System.out.println("Código de Barra: " + bas3.getCodBarra());
 
 									do {
 										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
@@ -361,10 +374,12 @@ public class SistemaMain {
 									corr1.setNome("Corretivo tom 1");
 									corr1.setMarca("Avon");
 									corr1.setPreco(15.00);
+									corr1.setCodBarra(503216897);
 
 									System.out.println("nome: " + corr1.getNome());
 									System.out.println("marca: " + corr1.getMarca());
 									System.out.println("preco: " + corr1.getPreco());
+									System.out.println("Código de Barra: " + corr1.getCodBarra());
 
 									do {
 										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
@@ -391,10 +406,12 @@ public class SistemaMain {
 									corr2.setNome("Corretivo tom 2");
 									corr2.setMarca("Oboticario");
 									corr2.setPreco(15.00);
+									corr2.setCodBarra(102365874);
 
 									System.out.println("nome: " + corr2.getNome());
 									System.out.println("marca: " + corr2.getMarca());
 									System.out.println("preco: " + corr2.getPreco());
+									System.out.println("Código de Barra: " + corr2.getCodBarra());
 
 									do {
 										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
@@ -421,10 +438,12 @@ public class SistemaMain {
 									corr3.setNome("Corretivo tom 3");
 									corr3.setMarca("Ruby Rose");
 									corr3.setPreco(15.00);
+									corr3.setCodBarra(440236587);
 
 									System.out.println("nome: " + corr3.getNome());
 									System.out.println("marca: " + corr3.getMarca());
 									System.out.println("preco: " + corr3.getPreco());
+									System.out.println("Código de Barra: " + corr3.getCodBarra());
 
 									do {
 										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
@@ -465,10 +484,12 @@ public class SistemaMain {
 									del1.setNome("Delineador 1");
 									del1.setMarca("Avon");
 									del1.setPreco(19.90);
+									del1.setCodBarra(669021548);
 
 									System.out.println("nome: " + del1.getNome());
 									System.out.println("marca: " + del1.getMarca());
 									System.out.println("preco: " + del1.getPreco());
+									System.out.println("Código de Barra: " + del1.getCodBarra());
 
 									do {
 										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
@@ -495,10 +516,12 @@ public class SistemaMain {
 									del2.setNome("Delineador 2");
 									del2.setMarca("Oboticario");
 									del2.setPreco(25.00);
+									del2.setCodBarra(123000658);
 
 									System.out.println("nome: " + del2.getNome());
 									System.out.println("marca: " + del2.getMarca());
 									System.out.println("preco: " + del2.getPreco());
+									System.out.println("Código de Barra: " + del2.getCodBarra());
 
 									do {
 										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
@@ -558,10 +581,12 @@ public class SistemaMain {
 									sab1.setNome("Sabonete Suave");
 									sab1.setMarca("Dove");
 									sab1.setPreco(4.90);
+									sab1.setCodBarra(546002136);
 
 									System.out.println("nome: " + sab1.getNome());
 									System.out.println("marca: " + sab1.getMarca());
 									System.out.println("preco: " + sab1.getPreco());
+									System.out.println("Código de Barra: " + sab1.getCodBarra());
 
 									do {
 										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
@@ -588,10 +613,12 @@ public class SistemaMain {
 									sab2.setNome("Sabonete D'Leite ");
 									sab2.setMarca("Natura");
 									sab2.setPreco(6.98);
+									sab2.setCodBarra(652300001);
 
 									System.out.println("nome: " + sab2.getNome());
 									System.out.println("marca: " + sab2.getMarca());
 									System.out.println("preco: " + sab2.getPreco());
+									System.out.println("Código de Barra: " + sab2.getCodBarra());
 
 									do {
 										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
@@ -618,10 +645,12 @@ public class SistemaMain {
 									sab3.setNome("Kit sabonete floral");
 									sab3.setMarca("Oboticario");
 									sab3.setPreco(19.75);
+									sab3.setCodBarra(909032562);
 
 									System.out.println("nome: " + sab3.getNome());
 									System.out.println("marca: " + sab3.getMarca());
 									System.out.println("preco: " + sab3.getPreco());
+									System.out.println("Código de Barra: " + sab3.getCodBarra());
 
 									do {
 										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
@@ -663,6 +692,7 @@ public class SistemaMain {
 									hid1.setNome("Hidratante 1");
 									hid1.setMarca("Oboticario");
 									hid1.setPreco(23.98);
+									hid1.setCodBarra(321000008);
 
 									System.out.println("nome: " + hid1.getNome());
 									System.out.println("marca: " + hid1.getMarca());
@@ -693,10 +723,12 @@ public class SistemaMain {
 									hid2.setNome("Hidratante 2");
 									hid2.setMarca("Natura");
 									hid2.setPreco(25.00);
+									hid2.setCodBarra(256984445);
 
 									System.out.println("nome: " + hid2.getNome());
 									System.out.println("marca: " + hid2.getMarca());
 									System.out.println("preco: " + hid2.getPreco());
+									System.out.println("Código de Barra: " + hid2.getCodBarra());
 
 									do {
 										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
@@ -723,10 +755,12 @@ public class SistemaMain {
 									hid3.setNome("Hidratante 3");
 									hid3.setMarca("Nivea");
 									hid3.setPreco(36.99);
+									hid3.setCodBarra(745566698);
 
 									System.out.println("nome: " + hid3.getNome());
 									System.out.println("marca: " + hid3.getMarca());
 									System.out.println("preco: " + hid3.getPreco());
+									System.out.println("Código de Barra: " + hid3.getCodBarra());
 
 									do {
 										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
@@ -768,10 +802,12 @@ public class SistemaMain {
 									cera1.setNome("Cera 1");
 									cera1.setMarca("Depi Roll");
 									cera1.setPreco(9.90);
+									cera1.setCodBarra(214563255);
 
 									System.out.println("nome: " + cera1.getNome());
 									System.out.println("marca: " + cera1.getMarca());
 									System.out.println("preco: " + cera1.getPreco());
+									System.out.println("Código de Barra: " + cera1.getCodBarra());
 
 									do {
 										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
@@ -798,10 +834,12 @@ public class SistemaMain {
 									cera2.setNome("Cera 2");
 									cera2.setMarca("Veet");
 									cera2.setPreco(9.90);
+									cera2.setCodBarra(500030002);
 
 									System.out.println("nome: " + cera2.getNome());
 									System.out.println("marca: " + cera2.getMarca());
 									System.out.println("preco: " + cera2.getPreco());
+									System.out.println("Código de Barra: " + cera2.getCodBarra());
 
 									do {
 										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
@@ -842,10 +880,12 @@ public class SistemaMain {
 									oleo1.setNome("Oleo 1");
 									oleo1.setMarca("Natura");
 									oleo1.setPreco(30.90);
+									oleo1.setCodBarra(800090087);
 
 									System.out.println("nome: " + oleo1.getNome());
 									System.out.println("marca: " + oleo1.getMarca());
 									System.out.println("preco: " + oleo1.getPreco());
+									System.out.println("Código de Barra: " + oleo1.getCodBarra());
 
 									do {
 										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
@@ -872,10 +912,12 @@ public class SistemaMain {
 									oleo2.setNome("Oleo 2");
 									oleo2.setMarca("Oboticario");
 									oleo2.setPreco(50.98);
-
+									oleo2.setCodBarra(780099965);
+									
 									System.out.println("nome: " + oleo2.getNome());
 									System.out.println("marca: " + oleo2.getMarca());
 									System.out.println("preco: " + oleo2.getPreco());
+									System.out.println("Código de Barra: " + oleo2.getCodBarra());
 
 									do {
 										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
@@ -918,10 +960,12 @@ public class SistemaMain {
 									mas1.setNome("Máscara 1");
 									mas1.setMarca("Ruby Rose");
 									mas1.setPreco(10.00);
+									mas1.setCodBarra(666541023);
 
 									System.out.println("nome: " + mas1.getNome());
 									System.out.println("marca: " + mas1.getMarca());
 									System.out.println("preco: " + mas1.getPreco());
+									System.out.println("Código de Barra: " + mas1.getCodBarra());
 
 									do {
 										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
@@ -948,10 +992,12 @@ public class SistemaMain {
 									mas2.setNome("Máscara 2");
 									mas2.setMarca("Sephora");
 									mas2.setPreco(10.00);
+									mas2.setCodBarra(233256900);
 
 									System.out.println("nome: " + mas2.getNome());
 									System.out.println("marca: " + mas2.getMarca());
 									System.out.println("preco: " + mas2.getPreco());
+									System.out.println("Código de Barra: " + mas2.getCodBarra());
 
 									do {
 										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
@@ -978,10 +1024,12 @@ public class SistemaMain {
 									mas3.setNome("Máscara 3");
 									mas3.setMarca("Neutrogena");
 									mas3.setPreco(10.00);
+									mas3.setCodBarra(778888960);
 
 									System.out.println("nome: " + mas3.getNome());
 									System.out.println("marca: " + mas3.getMarca());
 									System.out.println("preco: " + mas3.getPreco());
+									System.out.println("Código de Barra: " + mas3.getCodBarra());
 
 									do {
 										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
@@ -2077,7 +2125,7 @@ public class SistemaMain {
 				}
 				break;
 			}
-			case 5: { //tirar do codigo
+			case 5: { //tirar do codigo, mas so depois
 				System.out.println("CADASTRAR NOVOS PRODUTOS");
 				System.out.println("");
 				
