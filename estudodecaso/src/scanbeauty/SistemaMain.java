@@ -2055,23 +2055,67 @@ public class SistemaMain {
 			} // aspa case2
 
 			case 3: {
-				System.out.println("ALTERAR PRODUTOS");
-				System.out.println("Digite o codigo de barras do produto a ser alterado:");
-				long codBarras = Long.valueOf(leitura.nextLine());
+				while(op!=0) {
+					System.out.println("-ALTERAR PRODUTOS-");
+					System.out.println("0- VOLTAR");
+					System.out.println("1- ALTERAR NOME DO PRODUTO");
+					System.out.println("2- ALTERAR MARCA");
+					System.out.println("3- ALTERAR PREÇO");
+					
+					System.out.println("Insira qual você quer: ");
+					op = Integer.valueOf(leitura.nextLine());
+					break;
+					
+				} 
 
-				for (Produto produto : carrinhoProdutos) {
-					if (produto.getCodBarra() == codBarras) {
-						System.out.println("Você ecolheu o produto: " + produto.getNome());
 
-						System.out.println("Digite o novo preco:");
-						double novoPreco = Double.valueOf(leitura.nextLine());
-						produto.setPreco(novoPreco);
-
-					} else {
-						System.out.println();
+				switch(op) {
+				case 1: {
+					System.out.println("Digite o codigo de barras do produto a ser alterado:");
+					long codBarras = Long.valueOf(leitura.nextLine());
+					for (Produto produto : carrinhoProdutos) {
+						if (produto.getCodBarra() == codBarras) {
+							System.out.println("Você ecolheu o produto: " + produto.getNome());
+							System.out.println("Digite o novo nome:");
+							String novoNome = String.valueOf(leitura.nextLine());
+							produto.setNome(novoNome);
+						} else {
+							System.out.println();
+						}
 					}
+					break;
 				}
-
+				case 2:{
+					System.out.println("Digite o codigo de barras do produto a ser alterado:");
+					long codBarras = Long.valueOf(leitura.nextLine());
+					for (Produto produto : carrinhoProdutos) {
+						if (produto.getCodBarra() == codBarras) {
+							System.out.println("Você ecolheu o produto: " + produto.getNome());
+							System.out.println("Digite a nova marca:");
+							String novaMarca = String.valueOf(leitura.nextLine());
+							produto.setMarca(novaMarca);
+						} else {
+							System.out.println();
+						}
+					}
+					break;
+				}
+				case 3:{
+					System.out.println("Digite o codigo de barras do produto a ser alterado:");
+					long codBarras = Long.valueOf(leitura.nextLine());
+					for (Produto produto : carrinhoProdutos) {
+						if (produto.getCodBarra() == codBarras) {
+							System.out.println("Você ecolheu o produto: " + produto.getNome());
+							System.out.println("Digite o novo preco:");
+							double novoPreco = Double.valueOf(leitura.nextLine());
+							produto.setPreco(novoPreco);
+						} else {
+							System.out.println();
+						}
+					}					
+				}
+				
+				}
 				break;
 			}
 			case 4: {
