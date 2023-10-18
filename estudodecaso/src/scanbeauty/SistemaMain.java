@@ -26,7 +26,6 @@ public class SistemaMain {
 			op = Integer.valueOf(leitura.nextLine());
 
 			switch (op) {
-
 			case 1: {
 
 				while (op != 4) {
@@ -162,23 +161,26 @@ public class SistemaMain {
 
 							case 2: {
 								while (op != 0) {
+									System.out.println("0 - VOLTAR");
 									for (Produto prod : estoque) {
-										// System.out.println("- RÍMEL -");
-										// System.out.println("0- VOLTAR");
-										// System.out.println("1- RÍMEL 1 R$23,99");
-										// System.out.println("2- RÍMEL 2 R$20,90");
-
-										System.out.println(
-												prod.getCodBarra() + " - " + prod.getNome() + " R$ " + prod.getPreco());
+										if (prod.getNome().contains("Rímel")) {
+											System.out.println(prod.getCodBarra() + " - " + prod.getNome() + " R$ "
+													+ prod.getPreco());
+										}
 									}
 
 									System.out.println("Insira qual você quer: ");
 									op = Integer.valueOf(leitura.nextLine());
+
+									for (Produto prod : estoque) {
+										if (op == prod.getCodBarra()) {
+											carrinhoProdutos.add(prod);
+										}
+									}
+
 									break;
 								}
-								switch (op) {
-								case 1: {
-
+								if(op == 4) {
 									// System.out.println("nome: " + rim1.getNome());
 									// System.out.println("marca: " + rim1.getMarca());
 									// System.out.println("preco: " + rim1.getPreco());
@@ -204,8 +206,7 @@ public class SistemaMain {
 									} while (op != 's' && op != 'n');
 									break;
 								}
-								case 2: {
-
+								else if(op==5) {
 									// System.out.println("nome: " + rim2.getNome());
 									// System.out.println("marca: " + rim2.getMarca());
 									// System.out.println("preco: " + rim2.getPreco());
@@ -229,21 +230,56 @@ public class SistemaMain {
 										}
 									} while (op != 's' && op != 'n');
 									break;
+									
 								}
 								}
 								break;
-							}
 							case 3: {
 								while (op != 0) {
-									System.out.println("- BASE -");
-									System.out.println("0- VOLTAR");
-									System.out.println("1- BASE TOM 1 R$16,99");
-									System.out.println("2- BASE TOM 2 R$16,99");
-									System.out.println("3- BASE TOM 3 R$16,99");
+									System.out.println("0 - VOLTAR");
+									for (Produto prod : estoque) {
+										if (prod.getNome().contains("Base")) {
+											System.out.println(prod.getCodBarra() + " - " + prod.getNome() + " R$ "
+													+ prod.getPreco());
+										}
+									}
 
 									System.out.println("Insira qual você quer: ");
 									op = Integer.valueOf(leitura.nextLine());
+
+									for (Produto prod : estoque) {
+										if (op == prod.getCodBarra()) {
+											carrinhoProdutos.add(prod);
+										}
+									}
+
 									break;
+								}
+								if(op == 7) {
+									// System.out.println("nome: " + bas1.getNome());
+									// System.out.println("marca: " + bas1.getMarca());
+									// System.out.println("preco: " + bas1.getPreco());
+									// System.out.println("Código de Barra: " + bas1.getCodBarra());
+
+									do {
+										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
+										System.out.println("Insira sua opção: ");
+										String opx = leitura.nextLine();
+
+										if (opx.equals("s")) {
+											System.out.println("Produto adicionado ao carrinho");
+											// carrinhoProdutos.add(bas1);
+											System.out.println("");
+
+											break; // para sair do loop qndo 's' for digitado
+
+										} else if (opx.equals("n")) {
+											break; // sai do loop quando 'n' for digitado
+										} else {
+											System.out.println("Opçao incorreta. Porfavor, digite 's' ou 'n'");
+										}
+									} while (op != 's' && op != 'n');
+									break;	
 								}
 								switch (op) {
 								case 1: {
@@ -333,28 +369,32 @@ public class SistemaMain {
 							}
 							case 4: {
 								while (op != 0) {
-									System.out.println("- CORRETIVO -");
-									System.out.println("0- VOLTAR");
-									System.out.println("1- CORRETIVO TOM 1 R$15,00");
-									System.out.println("2- CORRETIVO TOM 2 R$15,00");
-									System.out.println("3- CORRETIVO TOM 3 R$15,00");
+									System.out.println("0 - VOLTAR");
+									for (Produto prod : estoque) {
+										if (prod.getNome().contains("Corretivo")) {
+											System.out.println(prod.getCodBarra() + " - " + prod.getNome() + " R$ "
+													+ prod.getPreco());
+										}
+									}
 
 									System.out.println("Insira qual você quer: ");
 									op = Integer.valueOf(leitura.nextLine());
+
+									for (Produto prod : estoque) {
+										if (op == prod.getCodBarra()) {
+											carrinhoProdutos.add(prod);
+										}
+									}
+
 									break;
 								}
 								switch (op) {
 								case 1: {
-									Produto corr1 = new Produto();
-									corr1.setNome("Corretivo tom 1");
-									corr1.setMarca("Avon");
-									corr1.setPreco(15.00);
-									corr1.setCodBarra(503216897);
 
-									System.out.println("nome: " + corr1.getNome());
-									System.out.println("marca: " + corr1.getMarca());
-									System.out.println("preco: " + corr1.getPreco());
-									System.out.println("Código de Barra: " + corr1.getCodBarra());
+									// System.out.println("nome: " + corr1.getNome());
+									// System.out.println("marca: " + corr1.getMarca());
+									// System.out.println("preco: " + corr1.getPreco());
+									// System.out.println("Código de Barra: " + corr1.getCodBarra());
 
 									do {
 										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
@@ -363,7 +403,7 @@ public class SistemaMain {
 
 										if (opx.equals("s")) {
 											System.out.println("Produto adicionado ao carrinho");
-											carrinhoProdutos.add(corr1);
+											// carrinhoProdutos.add(corr1);
 											System.out.println("");
 
 											break;
@@ -377,16 +417,11 @@ public class SistemaMain {
 									break;
 								}
 								case 2: {
-									Produto corr2 = new Produto();
-									corr2.setNome("Corretivo tom 2");
-									corr2.setMarca("Oboticario");
-									corr2.setPreco(15.00);
-									corr2.setCodBarra(102365874);
 
-									System.out.println("nome: " + corr2.getNome());
-									System.out.println("marca: " + corr2.getMarca());
-									System.out.println("preco: " + corr2.getPreco());
-									System.out.println("Código de Barra: " + corr2.getCodBarra());
+									// System.out.println("nome: " + corr2.getNome());
+									// System.out.println("marca: " + corr2.getMarca());
+									// System.out.println("preco: " + corr2.getPreco());
+									// System.out.println("Código de Barra: " + corr2.getCodBarra());
 
 									do {
 										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
@@ -395,7 +430,7 @@ public class SistemaMain {
 
 										if (opx.equals("s")) {
 											System.out.println("Produto adicionado ao carrinho");
-											carrinhoProdutos.add(corr2);
+											// carrinhoProdutos.add(corr2);
 											System.out.println("");
 
 											break;
@@ -409,16 +444,11 @@ public class SistemaMain {
 									break;
 								}
 								case 3: {
-									Produto corr3 = new Produto();
-									corr3.setNome("Corretivo tom 3");
-									corr3.setMarca("Ruby Rose");
-									corr3.setPreco(15.00);
-									corr3.setCodBarra(440236587);
 
-									System.out.println("nome: " + corr3.getNome());
-									System.out.println("marca: " + corr3.getMarca());
-									System.out.println("preco: " + corr3.getPreco());
-									System.out.println("Código de Barra: " + corr3.getCodBarra());
+									// System.out.println("nome: " + corr3.getNome());
+									// System.out.println("marca: " + corr3.getMarca());
+									// System.out.println("preco: " + corr3.getPreco());
+									// System.out.println("Código de Barra: " + corr3.getCodBarra());
 
 									do {
 										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
@@ -427,7 +457,7 @@ public class SistemaMain {
 
 										if (opx.equals("s")) {
 											System.out.println("Produto adicionado ao carrinho");
-											carrinhoProdutos.add(corr3);
+											// carrinhoProdutos.add(corr3);
 											System.out.println("");
 
 											break;
@@ -1737,6 +1767,24 @@ public class SistemaMain {
 		bas3.setPreco(16.99);
 		bas3.setCodBarra(8);
 		estoque.add(bas3);
+
+		Produto corr1 = new Produto();
+		corr1.setNome("Corretivo tom 3");
+		corr1.setMarca("Ruby Rose");
+		corr1.setPreco(15.00);
+		corr1.setCodBarra(9);
+
+		Produto corr2 = new Produto();
+		corr2.setNome("Corretivo tom 2");
+		corr2.setMarca("Oboticario");
+		corr2.setPreco(15.00);
+		corr2.setCodBarra(10);
+
+		Produto corr3 = new Produto();
+		corr3.setNome("Corretivo tom 3");
+		corr3.setMarca("Ruby Rose");
+		corr3.setPreco(15.00);
+		corr3.setCodBarra(11);
 
 	}
 }
