@@ -14,20 +14,20 @@ public class SistemaMain {
 
 		preencheEstoqueFicticio();
 
-		while (op != 5) {
+		while (op != 5) { // enquanto op for diferente de 5 o programa continua
 
 			System.out.println("- MENU -");
 			System.out.println("1- ADICIONAR PRODUTO");
 			System.out.println("2- EXIBIR PRODUTOS ADICIONADOS AO CARRINHO");
 			System.out.println("3- ALTERAR PRODUTO");
 			System.out.println("4- EXCLUIR PRODUTOS ADICIONADOS AO CARRINHO");
-			System.out.println("5- SAIR DO PROGRAMA");
+			System.out.println("5- SAIR DO PROGRAMA" + "\n");
 
+			System.out.println("Digite sua opção: ");
 			op = Integer.valueOf(leitura.nextLine());
 
 			switch (op) {
 			case 1: {
-
 				while (op != 4) {
 					System.out.println("- ADICIONAR PRODUTOS -");
 					System.out.println("1- MAQUIAGEM");
@@ -67,13 +67,9 @@ public class SistemaMain {
 									op = Integer.valueOf(leitura.nextLine());
 
 									for (Produto prod : estoque) {
-										if (op == prod.getCodBarra()) {
+										if (op == prod.getCodBarra()) { // O código verifica se o código inserido
+																		// corresponde a um produto no estoque
 											if (op == 1) {
-												// System.out.println("nome: " + bat1.getNome());
-												// System.out.println("marca: " + bat1.getMarca());
-												// System.out.println("preco: " + bat1.getPreco());
-												// System.out.println("Código de Barra: " + bat1.getCodBarra());
-
 												do {
 													System.out.println(
 															"Voce quer adicionar esse item ao carrinho? (s/n)");
@@ -93,7 +89,10 @@ public class SistemaMain {
 														System.out.println(
 																"Opçao incorreta. Porfavor, digite 's' ou 'n'");
 													}
-												} while (op != 's' && op != 'n');
+												} while (op != 's' && op != 'n'); // é usado para garantir que o usuário
+												// tenha apenas duas opções 's' para adicionar o item ao
+												// carrinho ou 'n' para não adicionar. O loop continua até
+												// que faça uma dessas escolhas.
 											} else if (op == 2) {
 												do {
 													System.out.println(
@@ -101,13 +100,13 @@ public class SistemaMain {
 													System.out.println("Insira sua opção: ");
 													String opx = leitura.nextLine();
 
-													if (opx.equals("s")) {
-														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+													if (opx.equals("s")) { //se digitar 's'
+														carrinhoProdutos.add(prod); //o o produto e add ao carrinho
+														System.out.println("Produto adicionado ao carrinho");														
 														System.out.println("");
 
 														break;
-													} else if (opx.equals("n")) {
+													} else if (opx.equals("n")) { //sair do loop quando 'n' for digitado
 														break;
 													} else {
 														System.out.println(
@@ -1610,8 +1609,8 @@ public class SistemaMain {
 
 	public static void preencheEstoqueFicticio() {
 
-		//produtos de maquiagem
-		
+		// produtos de maquiagem
+
 		Produto bat1 = new Produto();
 		bat1.setNome("Batom Rosa");
 		bat1.setMarca("Avon");
@@ -1702,12 +1701,10 @@ public class SistemaMain {
 		del2.setPreco(25.00);
 		del2.setCodBarra(13);
 		estoque.add(del2);
-		
-		
-		//produtos de pele
-		
-		
-		//produtos de cabelo
+
+		// produtos de pele
+
+		// produtos de cabelo
 
 	}
 }
