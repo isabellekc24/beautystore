@@ -100,13 +100,14 @@ public class SistemaMain {
 													System.out.println("Insira sua opção: ");
 													String opx = leitura.nextLine();
 
-													if (opx.equals("s")) { //se digitar 's'
-														carrinhoProdutos.add(prod); //o o produto e add ao carrinho
-														System.out.println("Produto adicionado ao carrinho");														
+													if (opx.equals("s")) { // se digitar 's'
+														carrinhoProdutos.add(prod); // o o produto e add ao carrinho
+														System.out.println("Produto adicionado ao carrinho");
 														System.out.println("");
 
 														break;
-													} else if (opx.equals("n")) { //sair do loop quando 'n' for digitado
+													} else if (opx.equals("n")) { // sair do loop quando 'n' for
+																					// digitado
 														break;
 													} else {
 														System.out.println(
@@ -1478,7 +1479,8 @@ public class SistemaMain {
 
 			case 3: {
 				while (op != 0) {
-					System.out.println("-ALTERAR PRODUTOS-");
+					System.out.println("");
+					System.out.println("-ALTERAR PRODUTO-");
 					System.out.println("0- VOLTAR");
 					System.out.println("1- ALTERAR NOME DO PRODUTO");
 					System.out.println("2- ALTERAR MARCA");
@@ -1491,39 +1493,46 @@ public class SistemaMain {
 
 				switch (op) {
 				case 1: {
-					System.out.println("Digite o codigo de barras do produto a ser alterado:");
+					System.out.println("- ALTERAR NOME DO PRODUTO -");
+					System.out.println("Digite o código de barras do produto a ser alterado:");
 					long codBarras = Long.valueOf(leitura.nextLine());
 
-					for (Produto produto : carrinhoProdutos) {
+					// Percorra a lista de produtos no estoque
+					for (Produto produto : estoque) {
 						if (produto.getCodBarra() == codBarras) {
-							System.out.println("Você ecolheu o produto: " + produto.getNome());
+							System.out.println("\nVocê escolheu o produto: " + produto.getNome());
 							System.out.println("Digite o novo nome:");
-							String novoNome = String.valueOf(leitura.nextLine());
+							String novoNome = leitura.nextLine();
 							produto.setNome(novoNome);
-						} else {
-							System.out.println();
+							System.out.println("Nome alterado com sucesso!\n");
+							break; // Isso encerrará, saindo do loop
 						}
 					}
 					break;
 				}
 
 				case 2: {
+					System.out.println("- ALTERAR MARCA DO PRODUTO -");
 					System.out.println("Digite o codigo de barras do produto a ser alterado:");
 					long codBarras = Long.valueOf(leitura.nextLine());
-					for (Produto produto : carrinhoProdutos) {
+
+					for (Produto produto : estoque) {
 						if (produto.getCodBarra() == codBarras) {
-							System.out.println("Você ecolheu o produto: " + produto.getNome());
+							System.out.println("\nVocê ecolheu o produto: " + produto.getNome());
 							System.out.println("Digite a nova marca:");
 							String novaMarca = String.valueOf(leitura.nextLine());
 							produto.setMarca(novaMarca);
+							System.out.println("Marca alterada com sucesso!");
+							break;
 						} else {
-							System.out.println();
+							System.out.println("Produto não encontrado no estoque.");
 						}
 					}
 					break;
 				}
 
 				case 3: {
+					System.out.println("- ALTERAR PRECO DO PRODUTO -" + "\n");
 					System.out.println("Digite o codigo de barras do produto a ser alterado:");
 					long codBarras = Long.valueOf(leitura.nextLine());
 					for (Produto produto : carrinhoProdutos) {
@@ -1668,7 +1677,7 @@ public class SistemaMain {
 		estoque.add(bas3);
 
 		Produto corr1 = new Produto();
-		corr1.setNome("Corretivo tom 3");
+		corr1.setNome("Corretivo tom 1");
 		corr1.setMarca("Ruby Rose");
 		corr1.setPreco(15.00);
 		corr1.setCodBarra(9);
