@@ -469,225 +469,171 @@ public class SistemaMain {
 							switch (op) {
 							case 1: {
 								while (op != 0) {
-									System.out.println("- SABONETE -");
 									System.out.println("0- VOLTAR");
-									System.out.println("1- SABONETE SUAVE R$4,90");
-									System.out.println("2- SABONETE D'LEITE R$4,90");
-									System.out.println("3- KIT SABONETE FLORAL R$19,75");
-
-									System.out.println("Insira qual você quer: ");
+									for (Produto prod : estoque) {
+										if(prod.getNome().contains("Sabonete")) {
+											System.out.println(prod.getCodBarra() + " - " + prod.getNome() + " R$ "
+													+ prod.getPreco());
+											}
+										
+									}
+									
+									System.out.println("Insira qual voce quer: ");
 									op = Integer.valueOf(leitura.nextLine());
+									
+									for (Produto prod : estoque) {
+										if(op == prod.getCodBarra()) {
+											
+											if(op == 14) {
+												do {
+													System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
+													System.out.println("Insira sua opção: ");
+													String opx = leitura.nextLine();
+
+													if (opx.equals("s")) {
+														System.out.println("Produto adicionado ao carrinho");
+														carrinhoProdutos.add(prod);
+														System.out.println("");
+
+														break;
+
+													} else if (opx.equals("n")) {
+														break;
+													} else {
+														System.out.println("Opçao incorreta. Porfavor, digite 's' ou 'n'");
+													}
+												} while (op != 's' && op != 'n');
+											}
+											if(op == 15) {
+												do {
+													System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
+													System.out.println("Insira sua opção: ");
+													String opx = leitura.nextLine();
+
+													if (opx.equals("s")) {
+														System.out.println("Produto adicionado ao carrinho");
+														carrinhoProdutos.add(prod);
+														System.out.println("");
+
+														break;
+
+													} else if (opx.equals("n")) {
+														break;
+													} else {
+														System.out.println("Opçao incorreta. Porfavor, digite 's' ou 'n'");
+													}
+												} while (op != 's' && op != 'n');
+											}
+											if (op == 16) {
+												do {
+													System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
+													System.out.println("Insira sua opção: ");
+													String opx = leitura.nextLine();
+
+													if (opx.equals("s")) {
+														System.out.println("Produto adicionado ao carrinho");
+														carrinhoProdutos.add(prod);
+														System.out.println("");
+
+														break;
+													} else if (opx.equals("n")) {
+														break;
+													} else {
+														System.out.println("Opçao incorreta. Porfavor, digite 's' ou 'n'");
+													}
+												} while (op != 's' && op != 'n');
+												break;
+											}
+										}										
+									}	
 									break;
-								}
-								switch (op) {
-								case 1: {
-									Produto sab1 = new Produto();
-									sab1.setNome("Sabonete Suave");
-									sab1.setMarca("Dove");
-									sab1.setPreco(4.90);
-									sab1.setCodBarra(546002136);
-
-									System.out.println("nome: " + sab1.getNome());
-									System.out.println("marca: " + sab1.getMarca());
-									System.out.println("preco: " + sab1.getPreco());
-									System.out.println("Código de Barra: " + sab1.getCodBarra());
-
-									do {
-										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
-										System.out.println("Insira sua opção: ");
-										String opx = leitura.nextLine();
-
-										if (opx.equals("s")) {
-											System.out.println("Produto adicionado ao carrinho");
-											carrinhoProdutos.add(sab1);
-											System.out.println("");
-
-											break;
-
-										} else if (opx.equals("n")) {
-											break;
-										} else {
-											System.out.println("Opçao incorreta. Porfavor, digite 's' ou 'n'");
-										}
-									} while (op != 's' && op != 'n');
-									break;
-								}
-								case 2: {
-									Produto sab2 = new Produto();
-									sab2.setNome("Sabonete D'Leite ");
-									sab2.setMarca("Natura");
-									sab2.setPreco(6.98);
-									sab2.setCodBarra(652300001);
-
-									System.out.println("nome: " + sab2.getNome());
-									System.out.println("marca: " + sab2.getMarca());
-									System.out.println("preco: " + sab2.getPreco());
-									System.out.println("Código de Barra: " + sab2.getCodBarra());
-
-									do {
-										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
-										System.out.println("Insira sua opção: ");
-										String opx = leitura.nextLine();
-
-										if (opx.equals("s")) {
-											System.out.println("Produto adicionado ao carrinho");
-											carrinhoProdutos.add(sab2);
-											System.out.println("");
-
-											break;
-
-										} else if (opx.equals("n")) {
-											break;
-										} else {
-											System.out.println("Opçao incorreta. Porfavor, digite 's' ou 'n'");
-										}
-									} while (op != 's' && op != 'n');
-									break;
-								}
-								case 3: {
-									Produto sab3 = new Produto();
-									sab3.setNome("Kit sabonete floral");
-									sab3.setMarca("Oboticario");
-									sab3.setPreco(19.75);
-									sab3.setCodBarra(909032562);
-
-									System.out.println("nome: " + sab3.getNome());
-									System.out.println("marca: " + sab3.getMarca());
-									System.out.println("preco: " + sab3.getPreco());
-									System.out.println("Código de Barra: " + sab3.getCodBarra());
-
-									do {
-										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
-										System.out.println("Insira sua opção: ");
-										String opx = leitura.nextLine();
-
-										if (opx.equals("s")) {
-											System.out.println("Produto adicionado ao carrinho");
-											carrinhoProdutos.add(sab3);
-											System.out.println("");
-
-											break;
-										} else if (opx.equals("n")) {
-											break;
-										} else {
-											System.out.println("Opçao incorreta. Porfavor, digite 's' ou 'n'");
-										}
-									} while (op != 's' && op != 'n');
-									break;
-								}
 								}
 								break;
 							}
 							case 2: {
 								while (op != 0) {
-									System.out.println("- HIDRATANTE -");
 									System.out.println("0- VOLTAR");
-									System.out.println("1- HIDRATANTE 1 R$23,98");
-									System.out.println("2- HIDRATANTE 2 R$25,00");
-									System.out.println("2- HIDRATANTE 3 R$36,99");
+									for (Produto prod : estoque) {
+										if(prod.getNome().contains("Hidratante")) {
+											System.out.println(prod.getCodBarra() + " - " + prod.getNome() + " R$ "
+													+ prod.getPreco());
+											}										
+									}									
 
 									System.out.println("Insira qual você quer: ");
 									op = Integer.valueOf(leitura.nextLine());
+									//break;
+									
+									for (Produto prod : estoque) {
+										if(op == prod.getCodBarra()) {
+											if(op == 17) {
+												do {
+													System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
+													System.out.println("Insira sua opção: ");
+													String opx = leitura.nextLine();
+
+													if (opx.equals("s")) {
+														System.out.println("Produto adicionado ao carrinho");
+														carrinhoProdutos.add(prod);
+														System.out.println("");
+
+														break;
+
+													} else if (opx.equals("n")) {
+														break;
+													} else {
+														System.out.println("Opçao incorreta. Porfavor, digite 's' ou 'n'");
+													}
+												} while (op != 's' && op != 'n');
+											}
+											if(op == 18) {
+												do {
+													System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
+													System.out.println("Insira sua opção: ");
+													String opx = leitura.nextLine();
+
+													if (opx.equals("s")) {
+														System.out.println("Produto adicionado ao carrinho");
+														carrinhoProdutos.add(prod);
+														System.out.println("");
+
+														break;
+
+													} else if (opx.equals("n")) {
+														break;
+													} else {
+														System.out.println("Opçao incorreta. Porfavor, digite 's' ou 'n'");
+													}
+												} while (op != 's' && op != 'n');
+											}
+											if (op == 19) {
+												do {
+													System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
+													System.out.println("Insira sua opção: ");
+													String opx = leitura.nextLine();
+
+													if (opx.equals("s")) {
+														System.out.println("Produto adicionado ao carrinho");
+														carrinhoProdutos.add(prod);
+														System.out.println("");
+
+														break;
+													} else if (opx.equals("n")) {
+														break;
+													} else {
+														System.out.println("Opçao incorreta. Porfavor, digite 's' ou 'n'");
+													}
+												} while (op != 's' && op != 'n');
+												break;
+											}
+										}									
+									}
 									break;
-								}
-								switch (op) {
-								case 1: {
-									Produto hid1 = new Produto();
-									hid1.setNome("Hidratante 1");
-									hid1.setMarca("Oboticario");
-									hid1.setPreco(23.98);
-									hid1.setCodBarra(321000008);
-
-									System.out.println("nome: " + hid1.getNome());
-									System.out.println("marca: " + hid1.getMarca());
-									System.out.println("preco: " + hid1.getPreco());
-
-									do {
-										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
-										System.out.println("Insira sua opção: ");
-										String opx = leitura.nextLine();
-
-										if (opx.equals("s")) {
-											System.out.println("Produto adicionado ao carrinho");
-											carrinhoProdutos.add(hid1);
-											System.out.println("");
-
-											break;
-
-										} else if (opx.equals("n")) {
-											break;
-										} else {
-											System.out.println("Opçao incorreta. Porfavor, digite 's' ou 'n'");
-										}
-									} while (op != 's' && op != 'n');
-									break;
-								}
-								case 2: {
-									Produto hid2 = new Produto();
-									hid2.setNome("Hidratante 2");
-									hid2.setMarca("Natura");
-									hid2.setPreco(25.00);
-									hid2.setCodBarra(256984445);
-
-									System.out.println("nome: " + hid2.getNome());
-									System.out.println("marca: " + hid2.getMarca());
-									System.out.println("preco: " + hid2.getPreco());
-									System.out.println("Código de Barra: " + hid2.getCodBarra());
-
-									do {
-										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
-										System.out.println("Insira sua opção: ");
-										String opx = leitura.nextLine();
-
-										if (opx.equals("s")) {
-											System.out.println("Produto adicionado ao carrinho");
-											carrinhoProdutos.add(hid2);
-											System.out.println("");
-
-											break;
-
-										} else if (opx.equals("n")) {
-											break;
-										} else {
-											System.out.println("Opçao incorreta. Porfavor, digite 's' ou 'n'");
-										}
-									} while (op != 's' && op != 'n');
-									break;
-								}
-								case 3: {
-									Produto hid3 = new Produto();
-									hid3.setNome("Hidratante 3");
-									hid3.setMarca("Nivea");
-									hid3.setPreco(36.99);
-									hid3.setCodBarra(745566698);
-
-									System.out.println("nome: " + hid3.getNome());
-									System.out.println("marca: " + hid3.getMarca());
-									System.out.println("preco: " + hid3.getPreco());
-									System.out.println("Código de Barra: " + hid3.getCodBarra());
-
-									do {
-										System.out.println("Voce quer adicionar esse item ao carrinho? (s/n)");
-										System.out.println("Insira sua opção: ");
-										String opx = leitura.nextLine();
-
-										if (opx.equals("s")) {
-											System.out.println("Produto adicionado ao carrinho");
-											carrinhoProdutos.add(hid3);
-											System.out.println("");
-
-											break;
-										} else if (opx.equals("n")) {
-											break;
-										} else {
-											System.out.println("Opçao incorreta. Porfavor, digite 's' ou 'n'");
-										}
-									} while (op != 's' && op != 'n');
-									break;
-								}
 								}
 								break;
-							}
+								}
+								
+								
 
 							case 3: {
 								while (op != 0) {
@@ -1712,7 +1658,50 @@ public class SistemaMain {
 		estoque.add(del2);
 
 		// produtos de pele
+		
+		Produto sab1 = new Produto();
+		sab1.setNome("Sabonete Suave");
+		sab1.setMarca("Dove");
+		sab1.setPreco(4.90);
+		sab1.setCodBarra(14);
+		estoque.add(sab1);
 
+		Produto sab2 = new Produto();
+		sab2.setNome("Sabonete D'Leite ");
+		sab2.setMarca("Natura");
+		sab2.setPreco(6.98);
+		sab2.setCodBarra(15);
+		estoque.add(sab2);
+		
+		Produto sab3 = new Produto();
+		sab3.setNome("Kit sabonete floral");
+		sab3.setMarca("Oboticario");
+		sab3.setPreco(19.75);
+		sab3.setCodBarra(16);
+		estoque.add(sab3);
+		
+		Produto hid1 = new Produto();
+		hid1.setNome("Hidratante 1");
+		hid1.setMarca("Oboticario");
+		hid1.setPreco(23.98);
+		hid1.setCodBarra(17);
+		estoque.add(hid1);
+		
+		Produto hid2 = new Produto();
+		hid2.setNome("Hidratante 2");
+		hid2.setMarca("Natura");
+		hid2.setPreco(25.00);
+		hid2.setCodBarra(18);
+		estoque.add(hid2);
+		
+		Produto hid3 = new Produto();
+		hid3.setNome("Hidratante 3");
+		hid3.setMarca("Nivea");
+		hid3.setPreco(36.99);
+		hid3.setCodBarra(19);
+		estoque.add(hid3);
+		
+		
 		// produtos de cabelo
 
 	}
