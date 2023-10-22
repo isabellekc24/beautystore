@@ -460,7 +460,7 @@ public class SistemaMain {
 							System.out.println("2- HIDRATANTE");
 							System.out.println("3- CERA DE DEPILÇÃO");
 							System.out.println("4- ÓLEO DE BANHO");
-							System.out.println("5- MÁSCARAS PARA O ROSTO");
+							System.out.println("5- ESFOLIANTE");
 							System.out.println("6- RETORNAR PARA ABA ANTERIOR");
 
 							System.out.println("Digite sua opção: ");
@@ -781,7 +781,7 @@ public class SistemaMain {
 								while (op != 0) {
 									System.out.println("0- VOLTAR");
 									for (Produto prod : estoque) {
-										if (prod.getNome().contains("Mascara")) {
+										if (prod.getNome().contains("Esfoliante")) {
 											System.out.println(prod.getCodBarra() + " - " + prod.getNome() + " R$ "
 													+ prod.getPreco());
 										}
@@ -1689,26 +1689,26 @@ public class SistemaMain {
 		oleo2.setCodBarra(23);
 		estoque.add(oleo2);
 
-		Produto mas1 = new Produto();
-		mas1.setNome("Mascara 1");
-		mas1.setMarca("Ruby Rose");
-		mas1.setPreco(10.00);
-		mas1.setCodBarra(24);
-		estoque.add(mas1);
+		Produto esf1 = new Produto();
+		esf1.setNome("Esfoliante 1");
+		esf1.setMarca("Nivea");
+		esf1.setPreco(24.98);
+		esf1.setCodBarra(24);
+		estoque.add(esf1);
 
-		Produto mas2 = new Produto();
-		mas2.setNome("Mascara 2");
-		mas2.setMarca("Sephora");
-		mas2.setPreco(10.00);
-		mas2.setCodBarra(25);
-		estoque.add(mas2);
+		Produto esf2 = new Produto();
+		esf2.setNome("Esfoliante 2");
+		esf2.setMarca("Sephora");
+		esf2.setPreco(32.50);
+		esf2.setCodBarra(25);
+		estoque.add(esf2);
 
-		Produto mas3 = new Produto();
-		mas3.setNome("Mascara 3");
-		mas3.setMarca("Neutrogena");
-		mas3.setPreco(10.00);
-		mas3.setCodBarra(26);
-		estoque.add(mas3);
+		Produto esf3 = new Produto();
+		esf3.setNome("Esfoliante 3");
+		esf3.setMarca("Oboticario");
+		esf3.setPreco(19.98);
+		esf3.setCodBarra(26);
+		estoque.add(esf3);
 
 		// produtos de cabelo
 
