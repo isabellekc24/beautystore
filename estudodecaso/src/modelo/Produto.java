@@ -1,4 +1,4 @@
-package scanbeauty;
+package modelo;
 
 public class Produto {
 
