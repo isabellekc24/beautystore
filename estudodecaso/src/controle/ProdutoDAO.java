@@ -28,12 +28,13 @@ public class ProdutoDAO implements IProdutoDAO {
 	}
 
 	@Override
-	public boolean alterar(Produto p, long codBarra) {
+	public boolean alterar(Produto p) {
 		for (int i = 0; i < tabelaProdutos.size(); i++) {
 			Produto produto = tabelaProdutos.get(i);
 
 			if (produto.getCodBarra() == p.getCodBarra()) {
-				return tabelaProdutos.set(i, p) != null;
+				tabelaProdutos.set(i, p);
+				return true;
 			}
 		}
 		return false;
@@ -329,5 +330,15 @@ public class ProdutoDAO implements IProdutoDAO {
 		crem2.setPreco(25.00);
 		crem2.setCodBarra(39);
 		tabelaProdutos.add(crem2);
+	}
+
+	@Override
+	public Produto buscaProdutoPorCodBarras(long codBarra) {
+		for (Produto produto : tabelaProdutos) {
+			if (produto.getCodBarra() == codBarra) {
+				return produto;
+			}
+		}
+		return null;
 	}
 }

@@ -13,8 +13,8 @@ public class SistemaMain {
 
 		Integer op = Integer.MAX_VALUE;
 		Scanner leitura = new Scanner(System.in);
-		
-		ProdutoDAO produtoDAO = ProdutoDAO.getInstancia();		
+
+		ProdutoDAO produtoDAO = ProdutoDAO.getInstancia();
 		ArrayList<Produto> estoque = produtoDAO.listarProdutos();
 
 		while (op != 5) { // enquanto op for diferente de 5 o programa continua
@@ -1327,17 +1327,23 @@ public class SistemaMain {
 					System.out.println("Digite o código de barras do produto a ser alterado:");
 					long codBarras = Long.valueOf(leitura.nextLine());
 
+					ProdutoDAO dao = new ProdutoDAO();
+
 					// Percorra a lista de produtos no estoque
-					for (Produto produto : estoque) {
-						if (produto.getCodBarra() == codBarras) {
-							System.out.println("\nVocê escolheu o produto: " + produto.getNome());
-							System.out.println("Digite o novo nome:");
-							String novoNome = leitura.nextLine();
-							produto.setNome(novoNome);
-							System.out.println("Nome alterado com sucesso!\n");
-							break; // Isso encerrará, saindo do loop
-						}
+					Produto produto = dao.buscaProdutoPorCodBarras(codBarras);
+
+					System.out.println("\nVocê escolheu o produto: " + produto.getNome());
+					System.out.println("Digite o novo nome:");
+					String novoNome = leitura.nextLine();
+					produto.setNome(novoNome);
+					
+					boolean validacao = dao.alterar(produto);
+					if (validacao == true) {
+						System.out.println("Nome alterado com sucesso!\n");
+					} else {
+						System.out.println("Erro ao alterar o nome");
 					}
+
 					break;
 				}
 
@@ -1446,5 +1452,4 @@ public class SistemaMain {
 
 	}
 
-	
 }
