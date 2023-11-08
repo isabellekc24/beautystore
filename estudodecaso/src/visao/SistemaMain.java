@@ -1,13 +1,14 @@
 package visao;
 
 import java.util.ArrayList;
+import controle.CarrinhoDAO;
 import java.util.Scanner;
 
 import controle.ProdutoDAO;
 import modelo.Produto;
 
 public class SistemaMain {
-	private static ArrayList<Produto> carrinhoProdutos = new ArrayList<>();
+	
 
 	public static void main(String[] args) {
 
@@ -81,7 +82,10 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
+														
 														System.out.println("");
 
 														break; // para sair do loop qndo 's' for digitado
@@ -104,7 +108,10 @@ public class SistemaMain {
 													String opx = leitura.nextLine();
 
 													if (opx.equals("s")) { // se digitar 's'
-														carrinhoProdutos.add(prod); // o o produto e add ao carrinho
+														
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod); // o o produto e add ao carrinho
+														
 														System.out.println("Produto adicionado ao carrinho");
 														System.out.println("");
 
@@ -126,7 +133,10 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
+														
 														System.out.println("");
 
 														break;
@@ -170,7 +180,10 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
+														
 														System.out.println("");
 
 														break;
@@ -192,7 +205,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -235,7 +249,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break; // para sair do loop qndo 's' for digitado
@@ -258,7 +273,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break; // para sair do loop qndo 's' for digitado
@@ -280,7 +296,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -323,7 +340,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -346,7 +364,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -369,7 +388,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -412,7 +432,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -434,7 +455,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -496,7 +518,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -518,7 +541,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -540,7 +564,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -584,7 +609,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -606,7 +632,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -628,7 +655,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -672,7 +700,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -694,7 +723,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -738,7 +768,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -760,7 +791,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -805,7 +837,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -826,7 +859,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -847,7 +881,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -907,7 +942,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -929,7 +965,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -950,7 +987,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -994,7 +1032,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -1017,7 +1056,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -1061,7 +1101,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -1084,7 +1125,9 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
+														
 														System.out.println("");
 
 														break;
@@ -1107,7 +1150,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -1151,7 +1195,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -1173,7 +1218,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -1194,7 +1240,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -1237,7 +1284,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -1259,7 +1307,8 @@ public class SistemaMain {
 
 													if (opx.equals("s")) {
 														System.out.println("Produto adicionado ao carrinho");
-														carrinhoProdutos.add(prod);
+														CarrinhoDAO dao = new CarrinhoDAO();
+														dao.inserir(prod);
 														System.out.println("");
 
 														break;
@@ -1290,7 +1339,9 @@ public class SistemaMain {
 				System.out.println("");
 				System.out.println("- EXIBIR PRODUTOS -  ");
 				System.out.println("");
-				for (Produto produto : carrinhoProdutos) {
+				
+				CarrinhoDAO dao = new CarrinhoDAO();
+				for (Produto produto : dao.listarProdutos()) {
 					System.out.println("Nome: " + produto.getNome() + "   Marca: " + produto.getMarca() + "   Preco: "
 							+ produto.getPreco());
 				}
@@ -1371,7 +1422,9 @@ public class SistemaMain {
 					System.out.println("- ALTERAR PRECO DO PRODUTO -" + "\n");
 					System.out.println("Digite o codigo de barras do produto a ser alterado:");
 					long codBarras = Long.valueOf(leitura.nextLine());
-					for (Produto produto : carrinhoProdutos) {
+					
+					CarrinhoDAO dao = new CarrinhoDAO();
+					for (Produto produto : 	dao.listarProdutos()) {
 						if (produto.getCodBarra() == codBarras) {
 							System.out.println("Você ecolheu o produto: " + produto.getNome());
 							System.out.println("Digite o novo preco:");
@@ -1393,15 +1446,16 @@ public class SistemaMain {
 				System.out.println("");
 
 				// exibe a lista de produtos enumerada
-				for (int i = 0; i < carrinhoProdutos.size(); i++) { // .size, meio que diz o tamanho da lista que esta
+				CarrinhoDAO dao = new CarrinhoDAO();
+				for (int i = 0; i < dao.listarProdutos().size(); i++) { // .size, meio que diz o tamanho da lista que esta
 																	// no carrinho
-					Produto produto = carrinhoProdutos.get(i);
+					Produto produto = 	dao.listarProdutos().get(i);
 					System.out.println(i + "- Nome: " + produto.getNome() + "   Marca: " + produto.getMarca()
 							+ "   Preco: " + produto.getPreco());
 				}
 
 				// essa parte verifica se o carrinhoProdutos estiver vazio exibe uma msg
-				if (carrinhoProdutos.isEmpty()) { // .isEmpty, ve se o carrinho esta vazio ou == a 0
+				if (dao.listarProdutos().isEmpty()) { // .isEmpty, ve se o carrinho esta vazio ou == a 0
 					System.out.println("O carrinho esta vazio");
 					System.out.println("");
 				} else { // se nao, pede ao usuario qual ele quer excluir
@@ -1413,7 +1467,7 @@ public class SistemaMain {
 					// SE estiver na lista, pede para que o usuario confirme ou nao a exclusao.
 					// SE NAO estiver na lista diz que o produto e invalido, porque ele nao esta na
 					// lista
-					if (exc >= 0 && exc < carrinhoProdutos.size()) {
+					if (exc >= 0 && exc < 	dao.listarProdutos().size()) {
 						do {
 							System.out.println("Voce tem certeza que quer excluir esse produto? (s/n)");
 							System.out.println("Insira sua opção: ");
@@ -1421,7 +1475,7 @@ public class SistemaMain {
 
 							if (opx.equals("s")) {
 								// produtoExc recebe o produto excluido para remover do carrinhoProdutos
-								Produto produtoExc = carrinhoProdutos.remove(exc);
+								Produto produtoExc = 	dao.listarProdutos().remove(exc);
 								System.out.println("Produto removido: " + produtoExc.getNome());
 								System.out.println("");
 
